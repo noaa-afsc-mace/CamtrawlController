@@ -1,4 +1,4 @@
-**CamtrawlController**
+# CamtrawlController
 <img width="842" height="613" alt="image" src="https://github.com/user-attachments/assets/4b7b4646-e78e-4cd1-a4e8-a641f20ba2e3" />
 
 The CamtrawlController provides power management, sensor integration, and camera triggering for the Camtrawl Stereo Camera system.
