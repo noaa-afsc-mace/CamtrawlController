@@ -1,0 +1,83 @@
+Use SERCOM2
+TX PAD2 arduino D2
+RX PAD1 arduino D3
+
+https://learn.sparkfun.com/tutorials/adding-more-sercom-ports-for-samd-boards
+
+https://learn.sparkfun.com/tutorials/samd21-minidev-breakout-hookup-guide/all
+
+
+Uart mySerial(&sercom2, 3, 2, SERCOM_RX_PAD_1, UART_TX_PAD_2);
+
+void SERCOM2_Handler()
+{
+  mySerial.IrqHandler();
+}
+
+#include "wiring_private.h" // pinPeripheral() function
+
+pinPeripheral(2, PIO_SERCOM); 
+pinPeripheral(3, PIO_SERCOM_ALT);
+
+
+
+
+
+
+
+/*********************************************************************
+ * Sample code for setting up additional Serial ports on a SamD21 board
+ * In this example the Redboard Turbo is used with the 16x2 SerLCD display
+ * For more information on the SerLCD code check out the github repo
+ * https://github.com/sparkfun/OpenLCD
+ * https://www.sparkfun.com/products/14812
+ * https://www.sparkfun.com/products/14072
+ * By: Michelle Shorter - SparkFun Electronics
+ * License: This code is public domain but you buy me a burger
+ * if you use this and we meet someday (Beefware license).
+ *********************************************************************/
+
+#include "wiring_private.h" // pinPeripheral() function
+//D2-TX, D3-RX
+Uart mySerial (&sercom2, 3, 2, SERCOM_RX_PAD_1, UART_TX_PAD_2);
+void SERCOM2_Handler()
+{
+  mySerial.IrqHandler();
+}
+
+int i = 0;
+
+void setup() {
+  // put your setup code here, to run once:
+  mySerial.begin(9600);
+
+  pinPeripheral(2, PIO_SERCOM);
+  pinPeripheral(3, PIO_SERCOM_ALT);
+
+  mySerial.write('|');//Setting character
+  mySerial.write('-');//Clear display
+  mySerial.write('|');//Put LCD into setting mode
+  mySerial.write(158 + 0); //Set green backlight amount to 0%
+  mySerial.write('|');//Put LCD into setting mode
+  mySerial.write(188 + 0); //Set blue backlight amount to 0%
+  mySerial.write('|');//Put LCD into setting mode
+  mySerial.write(128 + 29); //Set white/red backlight amount to 51% (100%=+29)
+
+  mySerial.print("Welcome");
+  delay(1000);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  mySerial.write('|');//Setting character
+  mySerial.write('-');//Clear display
+  mySerial.print("Counting ");
+  mySerial.print(i);
+  i++;
+  delay(1000);
+
+}
+
+
+
+

@@ -1,0 +1,7 @@
+i2c addresses:
+
+PA4LD    0x40
+BNO055   0x28
+         0x48
+         0x68
+
