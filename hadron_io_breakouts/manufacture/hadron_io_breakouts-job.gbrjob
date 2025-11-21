@@ -3,9 +3,9 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-      "Version": "8.0.4"
+      "Version": "9.0.4"
     },
-    "CreationDate": "2024-11-07T09:22:51-08:00"
+    "CreationDate": "2025-11-20T16:12:12-08:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -46,12 +46,12 @@
     },
     {
       "Path": "hadron_io_breakouts-In1_Cu.gbr",
-      "FileFunction": "Copper,L2,Inr",
+      "FileFunction": "Copper,L5,Inr",
       "FilePolarity": "Positive"
     },
     {
       "Path": "hadron_io_breakouts-In2_Cu.gbr",
-      "FileFunction": "Copper,L3,Inr",
+      "FileFunction": "Copper,L7,Inr",
       "FilePolarity": "Positive"
     },
     {
