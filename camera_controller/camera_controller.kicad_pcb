@@ -240,6 +240,7 @@
 	(net 81 "ext_uCRx")
 	(net 82 "MCU GPIO 2")
 	(net 83 "Net-(U3-Pin_14)")
+	(net 84 "Net-(Q2-D)")
 	(footprint "Ricks_Library:CONN_JST_SM03B-NSHSS-TB"
 		(layer "F.Cu")
 		(uuid "03bab43e-f135-484c-922d-a848191d50f4")
@@ -295,7 +296,7 @@
 		)
 		(property ki_fp_filters "CONN_SM03B-NSHSS-TBLFSN_JST")
 		(path "/961a2c25-23bd-45c4-b9c2-16e5baa84065/2170f89e-2f93-4060-920a-b5976c963cb6")
-		(sheetname "camera USB breakout")
+		(sheetname "/camera USB breakout/")
 		(sheetfile "camera_usb_breakout.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -584,7 +585,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -612,7 +613,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/457953a1-78c0-4fa3-bf5e-966b295d016e")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -876,7 +877,7 @@
 			)
 		)
 		(path "/961a2c25-23bd-45c4-b9c2-16e5baa84065/2467b64d-bd28-4339-91ac-0492cf027288")
-		(sheetname "camera USB breakout")
+		(sheetname "/camera USB breakout/")
 		(sheetfile "camera_usb_breakout.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -1184,7 +1185,7 @@
 		)
 		(property ki_fp_filters "CONN_SMO6B_JST")
 		(path "/961a2c25-23bd-45c4-b9c2-16e5baa84065/397c2872-55de-4ccd-b5fe-5fdd9d1a8e9a")
-		(sheetname "camera USB breakout")
+		(sheetname "/camera USB breakout/")
 		(sheetfile "camera_usb_breakout.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -1476,7 +1477,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1504,7 +1505,7 @@
 		)
 		(property ki_fp_filters "CP_*")
 		(path "/e9e0ad34-d0d5-46ac-b7ed-85c5a8592f73")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -1881,13 +1882,13 @@
 			)
 		)
 	)
-	(footprint "Ricks_Library:CONN4_BM04B-SRSS_JST"
+	(footprint "Ricks:CONN4_BM04B-SRSS_JST"
 		(layer "F.Cu")
 		(uuid "2fb1330f-98d9-45ff-97b3-a6dfc7f440b4")
 		(at 67.3 38.8 90)
 		(tags "BM04B-SRSS-TB ")
 		(property "Reference" "J8"
-			(at 0.3 -0.375 90)
+			(at 0 1.882201 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "0b519100-2bae-42e9-aaa9-44b279988c1e")
@@ -1936,7 +1937,7 @@
 		)
 		(property ki_fp_filters "CONN4_BM04B-SRSS_JST")
 		(path "/961a2c25-23bd-45c4-b9c2-16e5baa84065/876ebfc1-7e53-49f0-98cf-99b7ea15d8a4")
-		(sheetname "camera USB breakout")
+		(sheetname "/camera USB breakout/")
 		(sheetfile "camera_usb_breakout.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -1947,7 +1948,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "9cc879f2-1aa1-48a6-bc70-ff84d792c0f8")
+			(uuid "32581487-77b6-4a49-9ed7-ad3442d4b259")
 		)
 		(fp_line
 			(start -3.1242 0.587441)
@@ -1957,7 +1958,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "b9a36748-a207-498f-8d10-16f5d3efc375")
+			(uuid "7110536d-c3f3-4641-a0c2-5db2aa8b0122")
 		)
 		(fp_line
 			(start 3.1242 1.5748)
@@ -1967,7 +1968,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "997c961a-c426-4123-89c1-06d6a495fcd1")
+			(uuid "bccecd6e-7292-4862-833c-3c5d0d6f31a6")
 		)
 		(fp_line
 			(start 2.16294 1.5748)
@@ -1977,7 +1978,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "46ea0358-0b0f-4bb6-8c9b-3c180358796c")
+			(uuid "758e2fcf-f10c-4647-a19c-fa590c461904")
 		)
 		(fp_line
 			(start -3.1242 1.5748)
@@ -1987,7 +1988,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "d1cbbb75-df48-4d09-88ef-643057695bbd")
+			(uuid "67e02ac5-c9f1-4198-a0a1-6b19d134f0f8")
 		)
 		(fp_circle
 			(center -3.7592 1.882201)
@@ -1998,7 +1999,7 @@
 			)
 			(fill no)
 			(layer "F.SilkS")
-			(uuid "2fcd25d8-b299-485b-8297-135920439b69")
+			(uuid "585d8e1e-8a32-4440-a38a-ff211f47c7b3")
 		)
 		(fp_line
 			(start 3.7017 -1.904299)
@@ -2008,7 +2009,7 @@
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(uuid "98a17f4d-aeae-47c5-91cc-13e71458e5bb")
+			(uuid "a503c8b6-d31b-4307-af4b-0f1d93323c2b")
 		)
 		(fp_line
 			(start -3.7017 -1.904299)
@@ -2018,7 +2019,7 @@
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(uuid "1a6edb8d-fcdd-41df-96fe-3751881da690")
+			(uuid "1a20986a-4bcd-4000-be46-5d8bcd03cf7d")
 		)
 		(fp_line
 			(start 3.7017 2.910901)
@@ -2028,7 +2029,7 @@
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(uuid "d0e3c5e9-e0fe-493c-a877-ef783e0c5d99")
+			(uuid "8209cec9-1c3c-4a88-af0a-c43475483839")
 		)
 		(fp_line
 			(start -3.7017 2.910901)
@@ -2038,7 +2039,7 @@
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(uuid "932a7b4a-fb39-4727-95ee-4ae80ce37003")
+			(uuid "f312fb71-40b8-4b88-a335-ac3c82660977")
 		)
 		(fp_line
 			(start 2.9972 -1.4478)
@@ -2048,7 +2049,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "ce6c3725-1071-4ad1-9e72-6798c21237e5")
+			(uuid "3fa89068-66ea-4000-aa67-4f69c85a720c")
 		)
 		(fp_line
 			(start -2.9972 -1.4478)
@@ -2058,7 +2059,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "b947e6ac-8648-4237-879f-732988142705")
+			(uuid "3a005fa0-cefe-43ff-ade5-cb6bbfbe4384")
 		)
 		(fp_line
 			(start 2.9972 1.4478)
@@ -2068,7 +2069,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "2276e5a3-3296-4727-9ff1-87beb9d1a862")
+			(uuid "b74ed018-fc80-4910-9056-4f2f013169e0")
 		)
 		(fp_line
 			(start -2.9972 1.4478)
@@ -2078,7 +2079,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "0bd7b9b7-e362-4179-a2e1-50ab5164d662")
+			(uuid "e732ae86-e179-4c6b-bcf6-769d18add40d")
 		)
 		(fp_circle
 			(center -1.5 -0.022799)
@@ -2089,7 +2090,7 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "c998ced5-a021-487f-9d0d-3bec9b6a7c30")
+			(uuid "55f23e83-e0dd-4a9b-97f0-7b8c604bedf6")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 1.882201 90)
@@ -2192,7 +2193,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2220,7 +2221,7 @@
 		)
 		(property ki_fp_filters "C_*")
 		(path "/02818d3b-7e33-44ba-892c-34a4dce98983")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -2393,7 +2394,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2421,7 +2422,7 @@
 		)
 		(property ki_fp_filters "C_*")
 		(path "/5810b388-d283-40aa-9585-5c511174cd7b")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -2595,7 +2596,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2623,7 +2624,7 @@
 		)
 		(property ki_fp_filters "C_*")
 		(path "/6317b7fb-f7bb-401d-8d09-8453373e3dde")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -2797,7 +2798,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2825,7 +2826,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/961a2c25-23bd-45c4-b9c2-16e5baa84065/4ce0bb4c-71a9-445b-a7af-9472cd1c5d88")
-		(sheetname "camera USB breakout")
+		(sheetname "/camera USB breakout/")
 		(sheetfile "camera_usb_breakout.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -2998,7 +2999,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3026,7 +3027,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/961a2c25-23bd-45c4-b9c2-16e5baa84065/7cd01a69-29ba-4f52-a9dc-c1e67782e14a")
-		(sheetname "camera USB breakout")
+		(sheetname "/camera USB breakout/")
 		(sheetfile "camera_usb_breakout.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -3227,7 +3228,7 @@
 		)
 		(property ki_fp_filters "Converter*DCDC*RECOM*R*78E*0.5*")
 		(path "/d7f350bd-1235-420c-bce3-e8cbb1e9d459")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -3468,7 +3469,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3496,7 +3497,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/961a2c25-23bd-45c4-b9c2-16e5baa84065/e0307c49-7e7b-445f-9bd2-dd6012cb8541")
-		(sheetname "camera USB breakout")
+		(sheetname "/camera USB breakout/")
 		(sheetfile "camera_usb_breakout.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -3725,7 +3726,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3753,7 +3754,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/961a2c25-23bd-45c4-b9c2-16e5baa84065/6ee688d4-f22e-41bd-b961-251aa316f90f")
-		(sheetname "camera USB breakout")
+		(sheetname "/camera USB breakout/")
 		(sheetfile "camera_usb_breakout.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -4017,7 +4018,7 @@
 			)
 		)
 		(path "/961a2c25-23bd-45c4-b9c2-16e5baa84065/98714f63-e514-4080-ab8d-4068bfbbbdbd")
-		(sheetname "camera USB breakout")
+		(sheetname "/camera USB breakout/")
 		(sheetfile "camera_usb_breakout.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -4300,13 +4301,13 @@
 			)
 		)
 	)
-	(footprint "Ricks_Library:CONN4_BM04B-SRSS_JST"
+	(footprint "Ricks:CONN4_BM04B-SRSS_JST"
 		(layer "F.Cu")
 		(uuid "64697988-2e58-42ca-ab20-38301a0e4d3e")
 		(at 59.599999 38.797799 90)
 		(tags "BM04B-SRSS-TB ")
 		(property "Reference" "J7"
-			(at 0.247799 -0.524999 90)
+			(at 0 1.882201 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "68fed5b0-ab2b-47e7-bd6e-53ce4a6fdcf5")
@@ -4355,7 +4356,7 @@
 		)
 		(property ki_fp_filters "CONN4_BM04B-SRSS_JST")
 		(path "/961a2c25-23bd-45c4-b9c2-16e5baa84065/a1f3bb3c-e30d-4abc-ba6a-c979c2cae2c6")
-		(sheetname "camera USB breakout")
+		(sheetname "/camera USB breakout/")
 		(sheetfile "camera_usb_breakout.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -4366,7 +4367,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "8ff9fb19-ee5a-4883-a9d0-04a1820930d8")
+			(uuid "9ad45d26-7117-4cba-83ea-1f17f563433a")
 		)
 		(fp_line
 			(start -3.1242 0.587441)
@@ -4376,7 +4377,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "751d7718-076e-4494-ad67-b685c0225d1b")
+			(uuid "f931a822-eda6-411f-92a0-5c54ffe93aef")
 		)
 		(fp_line
 			(start 3.1242 1.5748)
@@ -4386,7 +4387,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "47e12106-2fd1-42d6-8146-93d463356d3d")
+			(uuid "48e07635-d7b4-4950-80dd-8361d4f5c144")
 		)
 		(fp_line
 			(start 2.16294 1.5748)
@@ -4396,7 +4397,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "46e3a1a4-9281-4635-8dc1-9f6d58100526")
+			(uuid "91adc08d-3bf0-4014-b2e3-12f9f8c81861")
 		)
 		(fp_line
 			(start -3.1242 1.5748)
@@ -4406,7 +4407,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "77f03287-bd3c-4dea-b452-08801605c8e4")
+			(uuid "3346c8fd-3471-4546-acf0-b1168994ec28")
 		)
 		(fp_circle
 			(center -3.7592 1.882201)
@@ -4417,7 +4418,7 @@
 			)
 			(fill no)
 			(layer "F.SilkS")
-			(uuid "03043c43-7a4e-4d20-9987-9bfd8ad15ba0")
+			(uuid "527a4a37-d2c3-4a15-bd6b-f83c1dea4c55")
 		)
 		(fp_line
 			(start 3.7017 -1.904299)
@@ -4427,7 +4428,7 @@
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(uuid "08f08bc0-897f-43cb-bf07-c5980c5b3647")
+			(uuid "f28c4aae-0e34-40bb-8ffe-16c58154f421")
 		)
 		(fp_line
 			(start -3.7017 -1.904299)
@@ -4437,7 +4438,7 @@
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(uuid "84049240-28c4-4d36-b5b2-01315cc3d325")
+			(uuid "566079d5-fb6b-40e8-a629-526dfbc093d5")
 		)
 		(fp_line
 			(start 3.7017 2.910901)
@@ -4447,7 +4448,7 @@
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(uuid "63b17149-c6c4-42df-adcd-e55ebe2542f6")
+			(uuid "470fb022-4e91-4905-a62b-fbc29abb052a")
 		)
 		(fp_line
 			(start -3.7017 2.910901)
@@ -4457,7 +4458,7 @@
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(uuid "d9b1f813-9dfe-46b7-8074-32faddcc7a5a")
+			(uuid "2f0fa89d-3d82-49ae-a2ec-afa28a245c93")
 		)
 		(fp_line
 			(start 2.9972 -1.4478)
@@ -4467,7 +4468,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "b5b66a95-963f-4ef2-9d48-4bdcdc7986c1")
+			(uuid "f07f9b43-671a-4be9-a87c-b07ae7e2c4af")
 		)
 		(fp_line
 			(start -2.9972 -1.4478)
@@ -4477,7 +4478,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "8ecb641e-85c7-4fc8-a0c0-232971396c58")
+			(uuid "473ff30f-f597-49b2-af0d-af5e1756c61f")
 		)
 		(fp_line
 			(start 2.9972 1.4478)
@@ -4487,7 +4488,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "07c5e93c-d58e-4bb3-88ce-47b46b9b237a")
+			(uuid "c7325795-bdcc-492b-987f-a63408d66ca4")
 		)
 		(fp_line
 			(start -2.9972 1.4478)
@@ -4497,7 +4498,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "d0d50d7e-bf5e-4cc5-bf1a-b83307f9da08")
+			(uuid "37103523-979a-4793-9887-7363c28ec65a")
 		)
 		(fp_circle
 			(center -1.5 -0.022799)
@@ -4508,7 +4509,7 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "44a42c8a-ac6b-4e0b-be23-c1ce0ec7ea1b")
+			(uuid "a81f328c-0117-40d3-af2d-0070f74e5be2")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 1.882201 90)
@@ -4611,7 +4612,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4639,7 +4640,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/10603694-11a4-4a72-bfdb-15c073e04396")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -7272,7 +7273,7 @@
 		)
 		(property ki_fp_filters "CONN_SM03B-NSHSS-TBLFSN_JST")
 		(path "/961a2c25-23bd-45c4-b9c2-16e5baa84065/a5538587-15f6-466c-8396-1c0b0df665a7")
-		(sheetname "camera USB breakout")
+		(sheetname "/camera USB breakout/")
 		(sheetfile "camera_usb_breakout.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -7561,7 +7562,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7589,7 +7590,7 @@
 		)
 		(property ki_fp_filters "CP_*")
 		(path "/bb554a56-bad6-4b21-a4a2-768a85482f5b")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -7994,7 +7995,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8022,7 +8023,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/8f3dfdb7-328d-4629-bf6f-ec93d72e71f6")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -8195,7 +8196,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8223,7 +8224,7 @@
 		)
 		(property ki_fp_filters "CP_*")
 		(path "/3c234fd5-b472-4682-903f-8af25400be12")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -8628,7 +8629,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8656,7 +8657,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/10f63c13-926b-4331-a597-5b5ee8e26252")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -8829,7 +8830,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8857,7 +8858,7 @@
 		)
 		(property ki_fp_filters "C_*")
 		(path "/7f641ce8-899a-4581-9f27-728d76c36c36")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -9202,7 +9203,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9230,7 +9231,7 @@
 		)
 		(property ki_fp_filters "C_*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/842a4706-b205-473e-8d14-40cd6888d1cb")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -9431,7 +9432,7 @@
 		)
 		(property ki_fp_filters "TSSOP*4.4x5mm*P0.65mm*")
 		(path "/420d4b5e-837a-4792-b1d3-71f60c7fed5e")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -9821,7 +9822,7 @@
 		)
 		(property ki_fp_filters "CONN_SM03B-NSHSS-TBLFSN_JST")
 		(path "/961a2c25-23bd-45c4-b9c2-16e5baa84065/5ab604b9-2d25-41bc-8f2c-c56c035717ef")
-		(sheetname "camera USB breakout")
+		(sheetname "/camera USB breakout/")
 		(sheetfile "camera_usb_breakout.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -11907,7 +11908,7 @@
 		)
 		(property ki_fp_filters "SO8_DIO SO8_DIO-M SO8_DIO-L")
 		(path "/a259733c-c838-43c3-a434-767b67f508db")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -12573,7 +12574,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12601,7 +12602,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/961a2c25-23bd-45c4-b9c2-16e5baa84065/567a48a1-5176-4603-b69d-3bec4ae43df0")
-		(sheetname "camera USB breakout")
+		(sheetname "/camera USB breakout/")
 		(sheetfile "camera_usb_breakout.kicad_sch")
 		(attr through_hole)
 		(fp_rect
@@ -12683,7 +12684,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12711,7 +12712,7 @@
 		)
 		(property ki_fp_filters "C_*")
 		(path "/f322b01d-6f22-494d-9dc2-16bbf853f674")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -12911,7 +12912,7 @@
 		)
 		(property ki_fp_filters "CONN_SMO6B_JST")
 		(path "/961a2c25-23bd-45c4-b9c2-16e5baa84065/31381b4d-b403-4220-864e-eba81fc51c2a")
-		(sheetname "camera USB breakout")
+		(sheetname "/camera USB breakout/")
 		(sheetfile "camera_usb_breakout.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -13185,7 +13186,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13213,7 +13214,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/22cabd32-279f-4bcc-b12d-ee430efcc1fb")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -13386,7 +13387,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13414,7 +13415,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/961a2c25-23bd-45c4-b9c2-16e5baa84065/77854b7f-9568-4e60-9826-dadb7a5c1a38")
-		(sheetname "camera USB breakout")
+		(sheetname "/camera USB breakout/")
 		(sheetfile "camera_usb_breakout.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -13587,7 +13588,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13615,7 +13616,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/14070d61-d5d5-42d9-a2fe-66f165040377")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr through_hole)
 		(fp_rect
@@ -14032,7 +14033,7 @@
 		)
 		(property ki_fp_filters "CONN_SM03B-NSHSS-TBLFSN_JST")
 		(path "/961a2c25-23bd-45c4-b9c2-16e5baa84065/94a394dd-c6d3-494b-a603-cf4c3ea39b4c")
-		(sheetname "camera USB breakout")
+		(sheetname "/camera USB breakout/")
 		(sheetfile "camera_usb_breakout.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -14492,7 +14493,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14520,7 +14521,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/e5745e15-56f8-41c3-a722-da888b29beaf")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -14721,7 +14722,7 @@
 		)
 		(property ki_fp_filters "SMC_DIO SMC_DIO-M SMC_DIO-L")
 		(path "/ecd86641-6420-412f-ab7c-9e5db376cb77")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -14967,7 +14968,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14995,7 +14996,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/fdcf070c-5f7b-487e-a1ff-9b482f5617fc")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr through_hole)
 		(fp_rect
@@ -15077,7 +15078,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15105,7 +15106,7 @@
 		)
 		(property ki_fp_filters "C_*")
 		(path "/278df0b7-3220-473d-bb26-cc97191c9c71")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -15279,7 +15280,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15307,7 +15308,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/961a2c25-23bd-45c4-b9c2-16e5baa84065/a07115db-c5a3-4165-be23-f7292a2b119d")
-		(sheetname "camera USB breakout")
+		(sheetname "/camera USB breakout/")
 		(sheetfile "camera_usb_breakout.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -15561,7 +15562,7 @@
 		)
 		(property ki_fp_filters "SD1206_AVX")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/fb57a889-e580-4f64-8032-b0909df59cf0")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -16132,7 +16133,7 @@
 		)
 		(property ki_fp_filters "MFP4_2P6X4P4_ONS")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/ab1a078a-ed8c-445d-bfed-fe8faf726af6")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -16457,7 +16458,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16485,7 +16486,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/9ca9d90c-382b-4ef8-9253-895fec0625ae")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -16686,7 +16687,7 @@
 		)
 		(property ki_fp_filters "TO?220*")
 		(path "/a95b883f-3ec9-4f82-b68f-4c1548558f62")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -17024,11 +17025,11 @@
 	(footprint "Package_TO_SOT_SMD:SOT-23"
 		(layer "B.Cu")
 		(uuid "01bd38c4-3eb2-49dd-ab28-4e2e76752a3a")
-		(at 31.65 67.3275 -90)
+		(at 32 68.8 180)
 		(descr "SOT, 3 Pin (https://www.jedec.org/system/files/docs/to-236h.pdf variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "D1"
-			(at 1.15 -2.6375 0)
+			(at 2.4 0.1 90)
 			(layer "B.SilkS")
 			(uuid "dcb22834-f999-40c3-8e3a-d19af688beb2")
 			(effects
@@ -17040,7 +17041,7 @@
 			)
 		)
 		(property "Value" "BZX84C10"
-			(at 0 -2.4 90)
+			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "d27df3fb-2fb7-4569-be72-ef25929cf4ae")
 			(effects
@@ -17052,7 +17053,7 @@
 			)
 		)
 		(property "Datasheet" "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzx84c2v4.pdf"
-			(at 0 0 90)
+			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
@@ -17066,7 +17067,7 @@
 			)
 		)
 		(property "Description" "300mW Zener Diode, SOT-23"
-			(at 0 0 90)
+			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
@@ -17081,19 +17082,9 @@
 		)
 		(property ki_fp_filters "SOT?23*")
 		(path "/ecd4cf22-7ea2-484e-b218-2eec24934fc3")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
-		(fp_line
-			(start -0.65 1.56)
-			(end 0 1.56)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "46cf82c1-95e8-4243-b91b-a093d9ec5e0d")
-		)
 		(fp_line
 			(start 0.65 1.56)
 			(end 0 1.56)
@@ -17105,16 +17096,6 @@
 			(uuid "edd373db-a288-4c08-abac-c41d48228b4a")
 		)
 		(fp_line
-			(start -0.65 -1.56)
-			(end 0 -1.56)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "8c7708ef-1df3-4614-b1a1-c67503c0071c")
-		)
-		(fp_line
 			(start 0.65 -1.56)
 			(end 0 -1.56)
 			(stroke
@@ -17123,6 +17104,26 @@
 			)
 			(layer "B.SilkS")
 			(uuid "975ab3ad-1054-41cf-8168-bd2fdaaefe8c")
+		)
+		(fp_line
+			(start -0.65 1.56)
+			(end 0 1.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "46cf82c1-95e8-4243-b91b-a093d9ec5e0d")
+		)
+		(fp_line
+			(start -0.65 -1.56)
+			(end 0 -1.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "8c7708ef-1df3-4614-b1a1-c67503c0071c")
 		)
 		(fp_poly
 			(pts
@@ -17137,16 +17138,6 @@
 			(uuid "de66c9ae-8fe2-4117-9bac-51c93adb1981")
 		)
 		(fp_line
-			(start -1.92 1.7)
-			(end 1.92 1.7)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "2b5e5d5c-6d8f-440e-b033-5e2433579d1d")
-		)
-		(fp_line
 			(start 1.92 1.7)
 			(end 1.92 -1.7)
 			(stroke
@@ -17155,16 +17146,6 @@
 			)
 			(layer "B.CrtYd")
 			(uuid "0e775c58-36c7-4fbf-a292-fd21afdc0a68")
-		)
-		(fp_line
-			(start -1.92 -1.7)
-			(end -1.92 1.7)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "9e229124-adb6-4adf-a974-308d4e2ce0cc")
 		)
 		(fp_line
 			(start 1.92 -1.7)
@@ -17177,14 +17158,24 @@
 			(uuid "9c54795c-ac28-4ccb-bdfd-a1213f7c0e4c")
 		)
 		(fp_line
-			(start -0.325 1.45)
-			(end -0.65 1.125)
+			(start -1.92 1.7)
+			(end 1.92 1.7)
 			(stroke
-				(width 0.1)
+				(width 0.05)
 				(type solid)
 			)
-			(layer "B.Fab")
-			(uuid "707c2303-9fd0-422c-9314-0682264f79ee")
+			(layer "B.CrtYd")
+			(uuid "2b5e5d5c-6d8f-440e-b033-5e2433579d1d")
+		)
+		(fp_line
+			(start -1.92 -1.7)
+			(end -1.92 1.7)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "9e229124-adb6-4adf-a974-308d4e2ce0cc")
 		)
 		(fp_line
 			(start 0.65 1.45)
@@ -17195,6 +17186,26 @@
 			)
 			(layer "B.Fab")
 			(uuid "a25b350e-206a-487b-9038-89db07fac989")
+		)
+		(fp_line
+			(start 0.65 -1.45)
+			(end 0.65 1.45)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.Fab")
+			(uuid "4e7e4040-aa30-43e3-9d63-94ce5fc07ea1")
+		)
+		(fp_line
+			(start -0.325 1.45)
+			(end -0.65 1.125)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.Fab")
+			(uuid "707c2303-9fd0-422c-9314-0682264f79ee")
 		)
 		(fp_line
 			(start -0.65 1.125)
@@ -17216,18 +17227,8 @@
 			(layer "B.Fab")
 			(uuid "3cf87e20-3d69-4cae-ac62-26b145829645")
 		)
-		(fp_line
-			(start 0.65 -1.45)
-			(end 0.65 1.45)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "B.Fab")
-			(uuid "4e7e4040-aa30-43e3-9d63-94ce5fc07ea1")
-		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(uuid "a280a651-fce0-478a-bb15-601ff223ea55")
 			(effects
@@ -17239,7 +17240,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9375 0.95 270)
+			(at -0.9375 0.95 180)
 			(size 1.475 0.6)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.25)
@@ -17249,7 +17250,7 @@
 			(uuid "58030bd0-5200-4bfc-bfb6-ba3e32afe866")
 		)
 		(pad "2" smd roundrect
-			(at -0.9375 -0.95 270)
+			(at -0.9375 -0.95 180)
 			(size 1.475 0.6)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.25)
@@ -17259,7 +17260,7 @@
 			(uuid "4ebcce66-6fec-4041-9f08-4fd9b9ff9a4f")
 		)
 		(pad "3" smd roundrect
-			(at 0.9375 0 270)
+			(at 0.9375 0 180)
 			(size 1.475 0.6)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.25)
@@ -17311,7 +17312,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -17341,7 +17342,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/5aa81870-4642-4415-92b2-35f886162218")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -17517,7 +17518,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -17547,7 +17548,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/b69b773e-35f3-42ac-b552-f1e13764ea31")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -17723,7 +17724,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -17753,7 +17754,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/ad7c710a-2323-46a6-b702-bbd705d269b8")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -17902,7 +17903,7 @@
 	(footprint "Package_TO_SOT_SMD:SOT-23"
 		(layer "B.Cu")
 		(uuid "07c5ceb6-59db-49f9-928c-e2bbc03f8714")
-		(at 29.775 63.6775 180)
+		(at 37 67.7 180)
 		(descr "SOT, 3 Pin (https://www.jedec.org/system/files/docs/to-236h.pdf variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "Q2"
@@ -17959,7 +17960,7 @@
 		)
 		(property ki_fp_filters "SOT?23*")
 		(path "/34229bf2-9a44-49cc-aa9e-ff3b122ab52f")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -18141,7 +18142,7 @@
 			(size 1.475 0.6)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.25)
-			(net 11 "Net-(D1-A)")
+			(net 84 "Net-(Q2-D)")
 			(pinfunction "D")
 			(pintype "passive")
 			(uuid "56d6aabe-b88d-4e03-bcbd-bee529f18030")
@@ -18189,7 +18190,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -18219,7 +18220,7 @@
 		)
 		(property ki_fp_filters "C_*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/6ace8613-579e-4428-b36b-8da7d5f87936")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -18395,7 +18396,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -18425,7 +18426,7 @@
 		)
 		(property ki_fp_filters "C_*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/52bce6a7-5305-4e16-80b3-920b5b11fac5")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -18601,7 +18602,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -18631,7 +18632,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/a48b6906-be49-4215-a595-910e58a8b0e3")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -18777,20 +18778,20 @@
 			)
 		)
 	)
-	(footprint "Ricks_Library:SOT95P285X140-6N"
+	(footprint "Ricks:SOT95P285X140-6N"
 		(layer "B.Cu")
 		(uuid "28d73c84-745b-4b91-9671-2d84c9e375d8")
 		(at 63.45 37.75 180)
 		(descr "ZXTC2045E6TA")
 		(tags "Transistor BJT NPN")
 		(property "Reference" "Q5"
-			(at 2.575 2.75 0)
+			(at -1 2.75 0)
 			(layer "B.SilkS")
 			(uuid "2464a764-7617-48d5-81b7-f3c6809faaa6")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 1.27 1.27)
+					(thickness 0.254)
 				)
 				(justify mirror)
 			)
@@ -18835,11 +18836,11 @@
 			)
 		)
 		(property "Height" "1.4"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "0205cfa1-385d-4579-b2ba-7317d29376e6")
+			(uuid "c909f6f7-2fa2-492e-b0cc-28bd1c238ea0")
 			(effects
 				(font
 					(size 1 1)
@@ -18849,11 +18850,11 @@
 			)
 		)
 		(property "Manufacturer_Name" "Diodes Incorporated"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "48e0e086-8cbf-49fb-b7f6-5aa5268abdc4")
+			(uuid "6e620299-70a7-4b1b-b7a5-b3f96c0f4f1c")
 			(effects
 				(font
 					(size 1 1)
@@ -18863,11 +18864,11 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "ZXTC2045E6TA"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "48a76237-01d8-4ad3-a43c-c98648265488")
+			(uuid "83f4756b-8cd5-4995-b019-c4fe084287a4")
 			(effects
 				(font
 					(size 1 1)
@@ -18877,11 +18878,11 @@
 			)
 		)
 		(property "Mouser Part Number" "522-ZXTC2045E6TA"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "6d5e2501-808a-40e3-9d70-4f4b319cc882")
+			(uuid "298b5ec8-6022-47db-8e66-4eda5d170b2a")
 			(effects
 				(font
 					(size 1 1)
@@ -18891,11 +18892,11 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/ZXTC2045E6TA?qs=7EMYER6HMn2Anbc0TxXj9Q%3D%3D"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "f6aff34f-9361-4fe3-89f0-9e6aabb96898")
+			(uuid "1644001b-c362-4f38-9879-cb85020f2c6e")
 			(effects
 				(font
 					(size 1 1)
@@ -18905,11 +18906,11 @@
 			)
 		)
 		(property "Arrow Part Number" "ZXTC2045E6TA"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "985542f1-08a0-4ecc-b04c-4b190b3534d7")
+			(uuid "4ba7cdc7-0768-45a1-aee0-ff4315b72fb6")
 			(effects
 				(font
 					(size 1 1)
@@ -18919,11 +18920,11 @@
 			)
 		)
 		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/zxtc2045e6ta/diodes-incorporated?region=nac"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "4831fde6-ddad-4d99-abb4-5813ef6d91d9")
+			(uuid "b48400f3-b2c1-4e76-82ca-574df6ed89e4")
 			(effects
 				(font
 					(size 1 1)
@@ -18933,148 +18934,148 @@
 			)
 		)
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/e4d8aa24-986e-4877-9089-fcf2abea16ec")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 0.375 1.5)
-			(end -0.375 1.5)
-			(stroke
-				(width 0.2)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "012e8260-5fda-4eca-ac6a-1aea26fe9c3e")
-		)
-		(fp_line
-			(start 0.375 -1.5)
-			(end 0.375 1.5)
-			(stroke
-				(width 0.2)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "ac79ea65-cb9b-44a4-9291-d64e359d1721")
-		)
-		(fp_line
-			(start -0.375 1.5)
-			(end -0.375 -1.5)
-			(stroke
-				(width 0.2)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "50b164ac-a687-4b44-9348-e46c38a231d9")
-		)
-		(fp_line
-			(start -0.375 -1.5)
 			(end 0.375 -1.5)
 			(stroke
 				(width 0.2)
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "54c0c755-df98-4dab-8950-ecf4e757a8c3")
+			(uuid "ea9a876e-cbfc-4ada-94f6-e67676de6480")
 		)
 		(fp_line
-			(start -0.725 1.6)
-			(end -1.875 1.6)
+			(start 0.375 -1.5)
+			(end -0.375 -1.5)
 			(stroke
 				(width 0.2)
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "5c6416a2-c0d0-406c-8f8f-7db746e44734")
+			(uuid "c9ca17b6-0283-4ff6-a993-b9426bcc4e4d")
+		)
+		(fp_line
+			(start -0.375 1.5)
+			(end 0.375 1.5)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "2b638fd5-17a1-4d67-b4df-7e8c22e7b7c7")
+		)
+		(fp_line
+			(start -0.375 -1.5)
+			(end -0.375 1.5)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "e9eba507-3fcf-4268-9372-ceb0712a5580")
+		)
+		(fp_line
+			(start -1.875 1.6)
+			(end -0.725 1.6)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "74bd3b29-278d-48d9-95e2-e7007d8a2788")
 		)
 		(fp_line
 			(start 2.125 1.8)
-			(end -2.125 1.8)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "cc12e88b-0ead-43f3-a242-e4e59e1f5ea3")
-		)
-		(fp_line
-			(start 2.125 -1.8)
-			(end 2.125 1.8)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "38bdcf0e-bef7-4de5-b620-9413c7482a1f")
-		)
-		(fp_line
-			(start -2.125 1.8)
-			(end -2.125 -1.8)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "326ffaca-990b-471c-bbdf-3d25d1492038")
-		)
-		(fp_line
-			(start -2.125 -1.8)
 			(end 2.125 -1.8)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "f5b34ba0-c075-46c9-a8d1-0bdf8df07130")
+			(uuid "fd5f65f6-2a9c-4303-8639-9dfd91944cd6")
+		)
+		(fp_line
+			(start 2.125 -1.8)
+			(end -2.125 -1.8)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "2d76ed73-009b-4f47-b084-4b05e201b7f6")
+		)
+		(fp_line
+			(start -2.125 1.8)
+			(end 2.125 1.8)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "0c7e5e41-9315-4bcd-bdfb-d4206a98ae7e")
+		)
+		(fp_line
+			(start -2.125 -1.8)
+			(end -2.125 1.8)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "a9104277-47a0-47cb-81ff-d2b92d44f2d0")
 		)
 		(fp_line
 			(start 0.8 1.5)
-			(end -0.8 1.5)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "B.Fab")
-			(uuid "d0fdb484-14fc-4dbf-a9da-669100c64193")
-		)
-		(fp_line
-			(start 0.8 -1.5)
-			(end 0.8 1.5)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "B.Fab")
-			(uuid "93683414-c9e8-4156-b412-c15ae81f920d")
-		)
-		(fp_line
-			(start 0.15 1.5)
-			(end -0.8 0.55)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "B.Fab")
-			(uuid "065b6c72-b95d-4efd-ab55-213e802044d8")
-		)
-		(fp_line
-			(start -0.8 1.5)
-			(end -0.8 -1.5)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "B.Fab")
-			(uuid "1d3e0840-9dc6-46fa-bd05-e9dccc7c600c")
-		)
-		(fp_line
-			(start -0.8 -1.5)
 			(end 0.8 -1.5)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "B.Fab")
-			(uuid "7c512c94-4ae3-49fc-baf5-be2f18d91fdf")
+			(uuid "977f875f-360c-4047-ab68-20657547de49")
+		)
+		(fp_line
+			(start 0.8 -1.5)
+			(end -0.8 -1.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.Fab")
+			(uuid "8ba9a027-d4d8-430f-8cec-b5d17ea7e369")
+		)
+		(fp_line
+			(start -0.8 1.5)
+			(end 0.8 1.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.Fab")
+			(uuid "4c0949ec-bf74-486d-82fe-86bf700e2e40")
+		)
+		(fp_line
+			(start -0.8 0.55)
+			(end 0.15 1.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.Fab")
+			(uuid "77e58dff-1d57-458d-bc39-66fbb8087953")
+		)
+		(fp_line
+			(start -0.8 -1.5)
+			(end -0.8 1.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.Fab")
+			(uuid "17887196-5b34-4f57-89ab-43b91666be77")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 5 0)
@@ -19155,20 +19156,20 @@
 			)
 		)
 	)
-	(footprint "Ricks_Library:SOT95P285X140-6N"
+	(footprint "Ricks:SOT95P285X140-6N"
 		(layer "B.Cu")
 		(uuid "30d0a531-b5ca-4109-ac99-3e6c94da0109")
 		(at 49.5 37.1 -90)
 		(descr "ZXTC2045E6TA")
 		(tags "Transistor BJT NPN")
 		(property "Reference" "Q3"
-			(at -2.25 -2.925 90)
+			(at -1 2.75 90)
 			(layer "B.SilkS")
 			(uuid "7ca1d6cc-5a3c-4814-8893-58f2dea40550")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 1.27 1.27)
+					(thickness 0.254)
 				)
 				(justify mirror)
 			)
@@ -19213,11 +19214,11 @@
 			)
 		)
 		(property "Height" "1.4"
-			(at 0 0 90)
+			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "6f9f48f7-5496-40ec-9848-d03b31564f95")
+			(uuid "e46a5557-c015-4546-8d72-f232d38a180f")
 			(effects
 				(font
 					(size 1 1)
@@ -19227,11 +19228,11 @@
 			)
 		)
 		(property "Manufacturer_Name" "Diodes Incorporated"
-			(at 0 0 90)
+			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "378b2480-e0a5-4d0b-8509-ae3d7dc2d206")
+			(uuid "3c42245a-cc82-47f8-8a44-b55e4ded13e3")
 			(effects
 				(font
 					(size 1 1)
@@ -19241,11 +19242,11 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "ZXTC2045E6TA"
-			(at 0 0 90)
+			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "25eb122a-1992-47b2-9645-6bfe4cf05b9d")
+			(uuid "cdcaf93c-d54e-464a-bd36-702c9c350de1")
 			(effects
 				(font
 					(size 1 1)
@@ -19255,11 +19256,11 @@
 			)
 		)
 		(property "Mouser Part Number" "522-ZXTC2045E6TA"
-			(at 0 0 90)
+			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "42396292-4a2d-4baa-a9d3-f1de4a5fae39")
+			(uuid "e047f5e0-18cb-48b4-8144-44fdf2d1ef24")
 			(effects
 				(font
 					(size 1 1)
@@ -19269,11 +19270,11 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/ZXTC2045E6TA?qs=7EMYER6HMn2Anbc0TxXj9Q%3D%3D"
-			(at 0 0 90)
+			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "464ca362-dd38-4c15-833c-ba1924e04cb9")
+			(uuid "2103f62f-eae6-414c-9ee5-cced4af95356")
 			(effects
 				(font
 					(size 1 1)
@@ -19283,11 +19284,11 @@
 			)
 		)
 		(property "Arrow Part Number" "ZXTC2045E6TA"
-			(at 0 0 90)
+			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "0fdbd4e0-22b9-45d6-b804-32b0d2015689")
+			(uuid "034f8c39-3198-4392-b17c-0daae1caf05d")
 			(effects
 				(font
 					(size 1 1)
@@ -19297,11 +19298,11 @@
 			)
 		)
 		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/zxtc2045e6ta/diodes-incorporated?region=nac"
-			(at 0 0 90)
+			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "37be8fc1-8cd4-4c8f-a489-ced369a578cd")
+			(uuid "d0d79a36-8629-4d6e-a867-4f7fd9f084fd")
 			(effects
 				(font
 					(size 1 1)
@@ -19311,148 +19312,148 @@
 			)
 		)
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/1a3df9b2-f6bb-4026-8f02-ca82cc5c41b8")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
-			(start -0.725 1.6)
-			(end -1.875 1.6)
+			(start -1.875 1.6)
+			(end -0.725 1.6)
 			(stroke
 				(width 0.2)
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "166fdbb4-2891-4718-8208-b7063707c495")
+			(uuid "6b87d755-0377-4910-8945-3cb7f69010a9")
 		)
 		(fp_line
 			(start -0.375 1.5)
-			(end -0.375 -1.5)
-			(stroke
-				(width 0.2)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "259851cc-f5ac-4611-b7b1-6fb48140fcfa")
-		)
-		(fp_line
-			(start 0.375 1.5)
-			(end -0.375 1.5)
-			(stroke
-				(width 0.2)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "7b85e076-29d8-41be-ad69-1560fcd16063")
-		)
-		(fp_line
-			(start -0.375 -1.5)
-			(end 0.375 -1.5)
-			(stroke
-				(width 0.2)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "66dbd521-6c05-4077-9a96-27982d4e974f")
-		)
-		(fp_line
-			(start 0.375 -1.5)
 			(end 0.375 1.5)
 			(stroke
 				(width 0.2)
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "6d832fcc-d4c8-409e-8791-153924260ac5")
+			(uuid "290d4b67-f4be-42f4-ba30-e599fc9d0992")
+		)
+		(fp_line
+			(start 0.375 1.5)
+			(end 0.375 -1.5)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "97e61af1-c2d7-43b3-8ef0-21d1759a3a26")
+		)
+		(fp_line
+			(start -0.375 -1.5)
+			(end -0.375 1.5)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "633aadf2-88b6-401f-8247-5fbd443ee167")
+		)
+		(fp_line
+			(start 0.375 -1.5)
+			(end -0.375 -1.5)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "392e59f5-dec0-4351-80f9-311100076323")
 		)
 		(fp_line
 			(start -2.125 1.8)
-			(end -2.125 -1.8)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "2ca6cace-4e56-42b2-8105-2009fc9dc8c0")
-		)
-		(fp_line
-			(start 2.125 1.8)
-			(end -2.125 1.8)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "054d16db-021a-4e51-b41b-475499e2434a")
-		)
-		(fp_line
-			(start -2.125 -1.8)
-			(end 2.125 -1.8)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "32c7c84f-6ab4-4fed-aea1-7637bf19d110")
-		)
-		(fp_line
-			(start 2.125 -1.8)
 			(end 2.125 1.8)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "bb518b4a-e66b-41d4-9860-7d8835bf8bc2")
+			(uuid "0ca2a706-3568-4f1d-b5ac-37a3600985f4")
+		)
+		(fp_line
+			(start 2.125 1.8)
+			(end 2.125 -1.8)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "fce373dc-864e-4b79-a83d-f91897dc612c")
+		)
+		(fp_line
+			(start -2.125 -1.8)
+			(end -2.125 1.8)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "59d33538-9b7c-4c60-8683-920ab9bb2dd0")
+		)
+		(fp_line
+			(start 2.125 -1.8)
+			(end -2.125 -1.8)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "9b73c535-6cc3-463a-ac6e-6f2d54bf73ce")
 		)
 		(fp_line
 			(start -0.8 1.5)
-			(end -0.8 -1.5)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "B.Fab")
-			(uuid "3b6cdff0-db00-4583-a7bd-f5ad159f7341")
-		)
-		(fp_line
-			(start 0.15 1.5)
-			(end -0.8 0.55)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "B.Fab")
-			(uuid "7278071f-abc1-4ddb-9169-d75fd9bd5a05")
-		)
-		(fp_line
-			(start 0.8 1.5)
-			(end -0.8 1.5)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "B.Fab")
-			(uuid "42e14e6a-bd28-4e8f-8aa2-90c298fc1949")
-		)
-		(fp_line
-			(start -0.8 -1.5)
-			(end 0.8 -1.5)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "B.Fab")
-			(uuid "812e157f-2771-433a-9161-a0bd325ac9bd")
-		)
-		(fp_line
-			(start 0.8 -1.5)
 			(end 0.8 1.5)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "B.Fab")
-			(uuid "a952f262-7cb2-4a35-8474-30d7c7072be6")
+			(uuid "fe556556-c1a8-488b-a15f-42129542d570")
+		)
+		(fp_line
+			(start 0.8 1.5)
+			(end 0.8 -1.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.Fab")
+			(uuid "fe6b4f76-3aef-4e05-80ed-146dde3785fb")
+		)
+		(fp_line
+			(start -0.8 0.55)
+			(end 0.15 1.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.Fab")
+			(uuid "8d81a703-ccbe-40e7-8da2-89766dc1d3e1")
+		)
+		(fp_line
+			(start -0.8 -1.5)
+			(end -0.8 1.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.Fab")
+			(uuid "3a0a9c05-53f6-47a6-b2c0-c0ae80e9c469")
+		)
+		(fp_line
+			(start 0.8 -1.5)
+			(end -0.8 -1.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.Fab")
+			(uuid "f1cbc1e3-3751-4905-9dcd-0b1457d5f6a4")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 5 90)
@@ -19563,7 +19564,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -19593,7 +19594,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/72898a93-81bb-437a-aa68-117fd19a2670")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -19769,7 +19770,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -19799,7 +19800,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/96327388-4886-4ed3-a064-bcff44a2a256")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -19975,7 +19976,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -20005,7 +20006,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/e557b5e3-9e1f-4146-b8db-5d693cf0951a")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -20181,7 +20182,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -20211,7 +20212,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/961a2c25-23bd-45c4-b9c2-16e5baa84065/ecbb5426-a303-43d9-8593-aaf72798a69f")
-		(sheetname "camera USB breakout")
+		(sheetname "/camera USB breakout/")
 		(sheetfile "camera_usb_breakout.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -20387,7 +20388,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -20417,7 +20418,7 @@
 		)
 		(property ki_fp_filters "C_*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/ad576ea9-e780-42d6-b879-b457843edadf")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -20593,7 +20594,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -20623,7 +20624,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/f1cc839d-858b-4428-a398-5f8cbf29a951")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -20799,7 +20800,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -20829,7 +20830,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/146d2456-e60e-4c65-ab72-cd7b429edaee")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -21005,7 +21006,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -21035,7 +21036,7 @@
 		)
 		(property ki_fp_filters "SolderJumper*Open*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/9269c555-945f-47e8-a417-86bbe8ae8cb3")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(zone_connect 1)
 		(attr exclude_from_pos_files exclude_from_bom)
@@ -21289,20 +21290,20 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Ricks_Library:SOT95P285X140-6N"
+	(footprint "Ricks:SOT95P285X140-6N"
 		(layer "B.Cu")
 		(uuid "73aaabaa-2543-4d35-9f82-f62a2eab753d")
 		(at 64.4 31.8 180)
 		(descr "ZXTC2045E6TA")
 		(tags "Transistor BJT NPN")
 		(property "Reference" "Q4"
-			(at -3.425 2.95 0)
+			(at -1 2.75 0)
 			(layer "B.SilkS")
 			(uuid "ffaf748c-8ea6-43b9-a3a3-ebe2b1b35e7b")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 1.27 1.27)
+					(thickness 0.254)
 				)
 				(justify mirror)
 			)
@@ -21347,11 +21348,11 @@
 			)
 		)
 		(property "Height" "1.4"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "2ae04f35-c0f9-4687-8426-393883c403f1")
+			(uuid "dda96888-73d1-42c2-bd75-596a4349f20a")
 			(effects
 				(font
 					(size 1 1)
@@ -21361,11 +21362,11 @@
 			)
 		)
 		(property "Manufacturer_Name" "Diodes Incorporated"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "1ac8a9dd-9902-4efa-a82d-3ab4f969ae3b")
+			(uuid "154ce90c-fc7f-49e2-ba05-7247c1e5b52c")
 			(effects
 				(font
 					(size 1 1)
@@ -21375,11 +21376,11 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "ZXTC2045E6TA"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "86bca319-2ed3-4ebe-8bd2-693c58a6c848")
+			(uuid "40547a0f-0430-4f9e-a3dd-eb4a0cb341f8")
 			(effects
 				(font
 					(size 1 1)
@@ -21389,11 +21390,11 @@
 			)
 		)
 		(property "Mouser Part Number" "522-ZXTC2045E6TA"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "d6c0889b-a6b8-47c0-b220-e3c10d753710")
+			(uuid "ca51edd6-d934-40c7-81c4-10e1e48b9eec")
 			(effects
 				(font
 					(size 1 1)
@@ -21403,11 +21404,11 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/ZXTC2045E6TA?qs=7EMYER6HMn2Anbc0TxXj9Q%3D%3D"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "fa78aa6e-6db9-4543-a73b-635fd0730d2e")
+			(uuid "c8d23806-b0e9-4c0d-85ce-f06de6d63a95")
 			(effects
 				(font
 					(size 1 1)
@@ -21417,11 +21418,11 @@
 			)
 		)
 		(property "Arrow Part Number" "ZXTC2045E6TA"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "8be11533-9234-4905-abab-ba9f11ef78ec")
+			(uuid "4f8c136a-28d0-4095-9028-7da9b6562fcc")
 			(effects
 				(font
 					(size 1 1)
@@ -21431,11 +21432,11 @@
 			)
 		)
 		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/zxtc2045e6ta/diodes-incorporated?region=nac"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "e8fe3d73-b3ed-4636-bcf2-96640e1bb7a4")
+			(uuid "a0fcb8f3-5294-4a3d-a4a5-654303c0045e")
 			(effects
 				(font
 					(size 1 1)
@@ -21445,148 +21446,148 @@
 			)
 		)
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/f908b691-869d-439d-b26c-6f0483b79945")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 0.375 1.5)
-			(end -0.375 1.5)
-			(stroke
-				(width 0.2)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "c49f59b9-940d-4b43-a766-9169e299958d")
-		)
-		(fp_line
-			(start 0.375 -1.5)
-			(end 0.375 1.5)
-			(stroke
-				(width 0.2)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "880d101e-744a-496c-b0f5-9b0ba6bebb66")
-		)
-		(fp_line
-			(start -0.375 1.5)
-			(end -0.375 -1.5)
-			(stroke
-				(width 0.2)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "2917a028-7d23-4271-ab3e-c9c37a36f618")
-		)
-		(fp_line
-			(start -0.375 -1.5)
 			(end 0.375 -1.5)
 			(stroke
 				(width 0.2)
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "4289731e-816c-4a1f-a729-594ea4b27a3c")
+			(uuid "128fb2e1-3962-4174-a802-fb444c01ab72")
 		)
 		(fp_line
-			(start -0.725 1.6)
-			(end -1.875 1.6)
+			(start 0.375 -1.5)
+			(end -0.375 -1.5)
 			(stroke
 				(width 0.2)
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "82897cef-400f-496f-a400-2b2148a2b9c4")
+			(uuid "b81b31d4-75b5-4272-93a1-a7834cb268f7")
+		)
+		(fp_line
+			(start -0.375 1.5)
+			(end 0.375 1.5)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "4123d521-b900-4b22-8e32-4a7fbfb87f14")
+		)
+		(fp_line
+			(start -0.375 -1.5)
+			(end -0.375 1.5)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "5d7ea8d5-9fde-474e-bd1a-d80dda680e02")
+		)
+		(fp_line
+			(start -1.875 1.6)
+			(end -0.725 1.6)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "c9fcdb7d-e110-43b8-ba9b-ef1a6bca9380")
 		)
 		(fp_line
 			(start 2.125 1.8)
-			(end -2.125 1.8)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "93ff9e62-f6b7-4056-bb80-23c0328a8366")
-		)
-		(fp_line
-			(start 2.125 -1.8)
-			(end 2.125 1.8)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "d0c71a3f-0547-47fb-aedc-940291291c52")
-		)
-		(fp_line
-			(start -2.125 1.8)
-			(end -2.125 -1.8)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "38484ee1-f016-4085-bc5c-b9ef25593c14")
-		)
-		(fp_line
-			(start -2.125 -1.8)
 			(end 2.125 -1.8)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "bdf859a2-3c77-48ba-80fd-e33fc55808ff")
+			(uuid "c3cbeb91-27eb-46bf-ba6f-d43c63ba6fca")
+		)
+		(fp_line
+			(start 2.125 -1.8)
+			(end -2.125 -1.8)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "38efd637-a008-4a57-b5a9-fdeda8833ffa")
+		)
+		(fp_line
+			(start -2.125 1.8)
+			(end 2.125 1.8)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "14f80fdd-edb4-4aef-8f24-890b16d1d396")
+		)
+		(fp_line
+			(start -2.125 -1.8)
+			(end -2.125 1.8)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "5bba90fd-4864-4d4f-9ce6-ec002092a61b")
 		)
 		(fp_line
 			(start 0.8 1.5)
-			(end -0.8 1.5)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "B.Fab")
-			(uuid "0a3656b6-dcf1-48cd-873e-c136dce5141d")
-		)
-		(fp_line
-			(start 0.8 -1.5)
-			(end 0.8 1.5)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "B.Fab")
-			(uuid "e2ef4eb6-61c9-4fd8-b01b-7feeadf3d719")
-		)
-		(fp_line
-			(start 0.15 1.5)
-			(end -0.8 0.55)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "B.Fab")
-			(uuid "5bdf6722-2788-4d13-b852-ae6363062e9b")
-		)
-		(fp_line
-			(start -0.8 1.5)
-			(end -0.8 -1.5)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "B.Fab")
-			(uuid "de76766f-487f-4c3f-9e85-0a299df0068b")
-		)
-		(fp_line
-			(start -0.8 -1.5)
 			(end 0.8 -1.5)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "B.Fab")
-			(uuid "278324c2-a74d-4e18-ae9e-4f14f5703895")
+			(uuid "7a9c99ed-bd0d-4be6-840c-98ab15c316f5")
+		)
+		(fp_line
+			(start 0.8 -1.5)
+			(end -0.8 -1.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.Fab")
+			(uuid "6aad286c-f366-4223-acc8-0b466274d5e0")
+		)
+		(fp_line
+			(start -0.8 1.5)
+			(end 0.8 1.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.Fab")
+			(uuid "58101ef0-cd66-4a85-9b87-82016b5d64e3")
+		)
+		(fp_line
+			(start -0.8 0.55)
+			(end 0.15 1.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.Fab")
+			(uuid "0b437275-4fa8-4341-bb14-86be609508fc")
+		)
+		(fp_line
+			(start -0.8 -1.5)
+			(end -0.8 1.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.Fab")
+			(uuid "a1272910-a7d5-4167-9dbb-f2d20541b06c")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 5 0)
@@ -21697,7 +21698,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -21727,7 +21728,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/961a2c25-23bd-45c4-b9c2-16e5baa84065/4c00b483-94fa-4c5f-9fde-59694695c1e5")
-		(sheetname "camera USB breakout")
+		(sheetname "/camera USB breakout/")
 		(sheetfile "camera_usb_breakout.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -21903,7 +21904,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -21933,7 +21934,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/9b927816-baf6-4f77-b899-fdf06de94a4f")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -22109,7 +22110,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -22139,7 +22140,7 @@
 		)
 		(property ki_fp_filters "C_*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/17ec7440-c6fa-4eb4-b62f-e4d02aa8cc5b")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -22315,7 +22316,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -22345,7 +22346,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/ac59d661-aa79-4931-b900-b1fdc0bb00c7")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -22521,7 +22522,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -22551,7 +22552,7 @@
 		)
 		(property ki_fp_filters "C_*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/2c9c9da4-4cb5-48b3-a75f-269b4b5f8a8a")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -22727,7 +22728,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -22757,7 +22758,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/5528262f-585a-4359-ad24-e94ea900f380")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -22906,7 +22907,7 @@
 	(footprint "Resistor_SMD:R_0805_2012Metric"
 		(layer "B.Cu")
 		(uuid "9fa18bdc-ffb4-4b33-9b2d-b9a757949631")
-		(at 32.875 63.6775 -90)
+		(at 40.1 67.7 -90)
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R4"
@@ -22933,7 +22934,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -22963,7 +22964,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/b8e25c14-2ef2-44e0-8706-04572d7b6127")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -23111,12 +23112,216 @@
 	)
 	(footprint "Resistor_SMD:R_0805_2012Metric"
 		(layer "B.Cu")
+		(uuid "a1551818-bec7-4422-af90-8285f41093b6")
+		(at 34.3 64.6)
+		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
+		(tags "resistor")
+		(property "Reference" "R34"
+			(at 0.1 -1.5 0)
+			(layer "B.SilkS")
+			(uuid "fbdbe19b-386a-4d17-b325-588db81acc37")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Value" "2.2k"
+			(at 0 -1.65 0)
+			(layer "B.Fab")
+			(uuid "04de75a1-ca4c-4ecf-981d-4e00b69c6e09")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "729dbd43-5573-47fb-9537-1144c2a2807f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "32858760-b226-42ee-8332-fb87099b4dd1")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property ki_fp_filters "R_*")
+		(path "/8f989b3d-a21e-40ba-8bb9-1c6d1c1cf1d9")
+		(sheetname "/")
+		(sheetfile "camera_controller.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start -0.227064 -0.735)
+			(end 0.227064 -0.735)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "af28d6f7-6d61-406f-96b7-c08a37276d00")
+		)
+		(fp_line
+			(start -0.227064 0.735)
+			(end 0.227064 0.735)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "2162348f-5be0-4442-8d6e-a5beb41aaf60")
+		)
+		(fp_line
+			(start -1.68 -0.95)
+			(end -1.68 0.95)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "6f1afd8f-1680-4006-a7a5-7ecdc4c43ba1")
+		)
+		(fp_line
+			(start -1.68 0.95)
+			(end 1.68 0.95)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "3ebed0a6-daea-49b0-8574-1c89d22a8c35")
+		)
+		(fp_line
+			(start 1.68 -0.95)
+			(end -1.68 -0.95)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "aaa19a9f-c317-4920-b9ac-237171f545a5")
+		)
+		(fp_line
+			(start 1.68 0.95)
+			(end 1.68 -0.95)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "6ff908b5-b0ca-4f0d-82dd-ca06b41cd201")
+		)
+		(fp_line
+			(start -1 -0.625)
+			(end -1 0.625)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.Fab")
+			(uuid "9d3c43e7-dce5-43c8-8aba-020d56c100c6")
+		)
+		(fp_line
+			(start -1 0.625)
+			(end 1 0.625)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.Fab")
+			(uuid "60143cae-5193-4cdf-afdc-19019735dff5")
+		)
+		(fp_line
+			(start 1 -0.625)
+			(end -1 -0.625)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.Fab")
+			(uuid "f05e1ad5-cc54-4d22-806f-71c67f059e89")
+		)
+		(fp_line
+			(start 1 0.625)
+			(end 1 -0.625)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "B.Fab")
+			(uuid "b15075e9-be3d-4020-90ae-2bdc6634f6d4")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(uuid "bc9f761e-a703-4efe-a572-7b9e58fe5337")
+			(effects
+				(font
+					(size 0.5 0.5)
+					(thickness 0.08)
+				)
+				(justify mirror)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -0.9125 0)
+			(size 1.025 1.4)
+			(layers "B.Cu" "B.Mask" "B.Paste")
+			(roundrect_rratio 0.243902)
+			(net 11 "Net-(D1-A)")
+			(pintype "passive")
+			(uuid "098dd37e-0365-4c85-b064-adb49d373969")
+		)
+		(pad "2" smd roundrect
+			(at 0.9125 0)
+			(size 1.025 1.4)
+			(layers "B.Cu" "B.Mask" "B.Paste")
+			(roundrect_rratio 0.243902)
+			(net 84 "Net-(Q2-D)")
+			(pintype "passive")
+			(uuid "8eb0d1ba-7ce1-4765-a274-112d955985fb")
+		)
+		(embedded_fonts no)
+		(model "${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "Resistor_SMD:R_0805_2012Metric"
+		(layer "B.Cu")
 		(uuid "a17655e4-45cd-48e2-a782-fcdb0c84531a")
-		(at 28.875 67.0775 90)
+		(at 31 65.4 90)
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R1"
-			(at -2.75 0.0375 90)
+			(at 0 -1.6 90)
 			(layer "B.SilkS")
 			(uuid "0a0ff4ce-d398-4a58-810f-6b6fa75bbc4e")
 			(effects
@@ -23139,7 +23344,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -23169,7 +23374,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/656b6431-c795-4144-85b6-b1564546e91d")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -23345,7 +23550,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -23375,7 +23580,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/7f58520b-5947-4472-95b6-ede16a76c599")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -23551,7 +23756,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -23581,7 +23786,7 @@
 		)
 		(property ki_fp_filters "C_*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/0cdbc278-37fd-4fbd-b817-6881fd1cd167")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -23842,7 +24047,7 @@
 			)
 		)
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/23db6d53-8918-4556-9f02-1057b52825f4")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -24242,7 +24447,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -24272,7 +24477,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/d38f171f-d6af-4b11-8692-5df2c41189cd")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -24448,7 +24653,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -24478,7 +24683,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/44878544-aaa7-4ff3-812c-47aaddaf5172")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -24627,7 +24832,7 @@
 	(footprint "Resistor_SMD:R_0805_2012Metric"
 		(layer "B.Cu")
 		(uuid "c9a90bf2-1e57-4b4e-9e92-f1d35f2aac45")
-		(at 34.875 63.6775 90)
+		(at 42.1 67.7 90)
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R3"
@@ -24654,7 +24859,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -24684,7 +24889,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/53601519-555e-4ee0-89ea-709a0cb366f6")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -24860,7 +25065,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -24890,7 +25095,7 @@
 		)
 		(property ki_fp_filters "C_*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/5546f0c8-299e-40f4-bfd0-4ad55af2643d")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -25066,7 +25271,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -25096,7 +25301,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/1169a0a4-9530-4cec-a7eb-1537565f4fa0")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -25302,7 +25507,7 @@
 		)
 		(property ki_fp_filters "TSSOP*3x3mm*P0.5mm*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/94133642-b250-4275-90fe-e6a1a9132faf")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -25642,7 +25847,7 @@
 		)
 		(property ki_fp_filters "SOT?23*")
 		(path "/60840b22-4e55-45b7-a1ce-9af33ef6e7c7")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "camera_controller.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -25872,7 +26077,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -25902,7 +26107,7 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/75aa1298-d9a6-4abf-a077-b08475defc3c/78f509d5-d3ee-4dfb-a276-d3e089ed5389")
-		(sheetname "controller_page_2")
+		(sheetname "/controller_page_2/")
 		(sheetfile "camera_controller_2.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -27072,7 +27277,7 @@
 		(uuid "0094e5bf-c863-40af-88fa-4c9c19095c93")
 	)
 	(via
-		(at 34.075 65.6775)
+		(at 40.1 70)
 		(size 0.51)
 		(drill 0.254)
 		(layers "F.Cu" "B.Cu")
@@ -27353,8 +27558,8 @@
 		(uuid "1c4fd63d-7a83-445d-b317-fb66f18973a8")
 	)
 	(segment
-		(start 30.7125 64.6275)
-		(end 32.8375 64.6275)
+		(start 37.9375 68.65)
+		(end 40.0625 68.65)
 		(width 0.2)
 		(layer "B.Cu")
 		(net 2)
@@ -27377,8 +27582,8 @@
 		(uuid "5ae08be5-49de-4612-b87c-568e7199c5fa")
 	)
 	(segment
-		(start 32.8375 64.6275)
-		(end 32.875 64.59)
+		(start 40.0625 68.65)
+		(end 40.1 68.6125)
 		(width 0.2)
 		(layer "B.Cu")
 		(net 2)
@@ -27441,6 +27646,14 @@
 		(uuid "971031a6-03b1-4a93-befd-782d34a235a6")
 	)
 	(segment
+		(start 40.1 70)
+		(end 40.1 68.6125)
+		(width 0.2)
+		(layer "B.Cu")
+		(net 2)
+		(uuid "a649bbeb-ec6f-4b14-a82f-0b9346144c3b")
+	)
+	(segment
 		(start 78.85 37.05)
 		(end 79.15 37.35)
 		(width 0.2)
@@ -27455,14 +27668,6 @@
 		(layer "B.Cu")
 		(net 2)
 		(uuid "b5149564-d1c5-4159-a4b8-5dd7835f7056")
-	)
-	(segment
-		(start 33.9625 65.6775)
-		(end 32.875 64.59)
-		(width 0.2)
-		(layer "B.Cu")
-		(net 2)
-		(uuid "bccd3bc2-9522-46ea-9b2b-41cc2159756a")
 	)
 	(segment
 		(start 78.85 37.05)
@@ -27527,14 +27732,6 @@
 		(layer "B.Cu")
 		(net 2)
 		(uuid "f253ebe7-0a89-4a4e-b1d7-4f3b80e12b9f")
-	)
-	(segment
-		(start 34.075 65.6775)
-		(end 33.9625 65.6775)
-		(width 0.2)
-		(layer "B.Cu")
-		(net 2)
-		(uuid "fbb52f30-c53b-4ac4-b461-5f6cca0b94d5")
 	)
 	(segment
 		(start 62.15 36.8)
@@ -28277,36 +28474,36 @@
 		(uuid "df803775-e675-40a9-a7a7-57157a20753a")
 	)
 	(segment
-		(start 31.375 67.99)
-		(end 31.65 68.265)
+		(start 31.0625 68.8)
+		(end 31.0625 66.375)
 		(width 0.2)
 		(layer "B.Cu")
 		(net 9)
-		(uuid "5eb13ee0-6655-46e9-9417-53cd9f2e31f6")
-	)
-	(segment
-		(start 30.5 69.615)
-		(end 28.875 67.99)
-		(width 0.2)
-		(layer "B.Cu")
-		(net 9)
-		(uuid "83a283c1-60c3-4090-bf85-ada78858f27b")
+		(uuid "1657d42c-4c55-4e42-add8-89853ba2d3b8")
 	)
 	(segment
 		(start 30.5 74.4)
-		(end 30.5 69.615)
+		(end 30.5 69.3625)
 		(width 0.2)
 		(layer "B.Cu")
 		(net 9)
-		(uuid "b69a0e1d-6b4f-488f-9ee6-02fac43a4c70")
+		(uuid "b3841125-0f58-4ab5-8b61-b6957147fffd")
 	)
 	(segment
-		(start 28.875 67.99)
-		(end 31.375 67.99)
+		(start 30.5 69.3625)
+		(end 31.0625 68.8)
 		(width 0.2)
 		(layer "B.Cu")
 		(net 9)
-		(uuid "d6fe4557-f177-46c6-8d0b-055a038fb0dc")
+		(uuid "ea1c327f-2b39-4e39-a148-ebc684c4ef03")
+	)
+	(segment
+		(start 31.0625 66.375)
+		(end 31 66.3125)
+		(width 0.2)
+		(layer "B.Cu")
+		(net 9)
+		(uuid "fedab362-8eef-4a35-9040-2df86b290c39")
 	)
 	(segment
 		(start 22.255 67.42)
@@ -28333,60 +28530,60 @@
 		(uuid "f9f83c5e-2a33-499e-ba21-9719252c00c6")
 	)
 	(segment
-		(start 28.46 65.75)
-		(end 25.325 65.75)
+		(start 33.3875 64.6)
+		(end 33.2 64.7875)
 		(width 0.2)
 		(layer "B.Cu")
 		(net 11)
-		(uuid "190c30f4-34d9-4e8c-9ef3-5ee0ba84db19")
+		(uuid "2a8e0666-a7dd-4fea-a152-cd6b5d4e5394")
 	)
 	(segment
-		(start 28.875 66.165)
-		(end 28.875 63.715)
+		(start 33.2 64.7875)
+		(end 33.2 67.5875)
 		(width 0.2)
 		(layer "B.Cu")
 		(net 11)
-		(uuid "1f98f07c-774a-4ce2-8fae-cc09235f1aa2")
+		(uuid "6e96a37c-aafa-44eb-8f37-7f7a1f12f044")
 	)
 	(segment
-		(start 28.875 63.715)
-		(end 28.8375 63.6775)
+		(start 31 64.4875)
+		(end 33.275 64.4875)
 		(width 0.2)
 		(layer "B.Cu")
 		(net 11)
-		(uuid "48d66ef7-2dfb-488b-90bd-f4e9c36f07ed")
+		(uuid "872df383-0e12-432b-b0a6-15092bdf847b")
 	)
 	(segment
-		(start 30.7 66.39)
-		(end 29.1 66.39)
+		(start 26.5875 64.4875)
+		(end 31 64.4875)
 		(width 0.2)
 		(layer "B.Cu")
 		(net 11)
-		(uuid "ce3cdc38-4d8a-4fca-a667-764e47dcb008")
+		(uuid "9950bf58-279b-44b8-806e-3413fa82679e")
 	)
 	(segment
-		(start 28.875 66.165)
-		(end 28.46 65.75)
+		(start 33.2 67.5875)
+		(end 32.9375 67.85)
 		(width 0.2)
 		(layer "B.Cu")
 		(net 11)
-		(uuid "d5172a04-e5cb-4cb4-b764-00722c01ec44")
+		(uuid "ab6be57b-8a58-4837-abd2-abf495ff7d5e")
 	)
 	(segment
-		(start 29.1 66.39)
-		(end 28.875 66.165)
+		(start 33.275 64.4875)
+		(end 33.3875 64.6)
 		(width 0.2)
 		(layer "B.Cu")
 		(net 11)
-		(uuid "dc4e5d81-6056-4dec-bbbb-fd540413a1e2")
+		(uuid "b594d583-4cb1-4a04-b213-acf4577c473c")
 	)
 	(segment
-		(start 25.325 65.75)
-		(end 23.655 67.42)
+		(start 23.655 67.42)
+		(end 26.5875 64.4875)
 		(width 0.2)
 		(layer "B.Cu")
 		(net 11)
-		(uuid "f24eff34-3d33-485c-a39c-49d53f2f0b5a")
+		(uuid "dadacb7e-56c6-48af-859a-870ba31f0cc0")
 	)
 	(via
 		(at 23.425 61.7)
@@ -28675,24 +28872,24 @@
 		(uuid "fa284229-7dc3-4bd9-908b-0942053a82dd")
 	)
 	(segment
-		(start 32.8375 62.7275)
-		(end 32.875 62.765)
+		(start 40.0625 66.75)
+		(end 40.1 66.7875)
 		(width 0.2)
 		(layer "B.Cu")
 		(net 14)
 		(uuid "13af9db2-332a-4ebc-9509-fc987a666d03")
 	)
 	(segment
-		(start 30.7125 62.7275)
-		(end 32.8375 62.7275)
+		(start 37.9375 66.75)
+		(end 40.0625 66.75)
 		(width 0.2)
 		(layer "B.Cu")
 		(net 14)
 		(uuid "1816ec58-cd6d-42ae-a266-edfb8728315e")
 	)
 	(segment
-		(start 32.875 62.765)
-		(end 34.875 62.765)
+		(start 40.1 66.7875)
+		(end 42.1 66.7875)
 		(width 0.2)
 		(layer "B.Cu")
 		(net 14)
@@ -28875,20 +29072,12 @@
 		(uuid "a1af0f25-6a62-45b9-9539-cfcbf14c26a2")
 	)
 	(segment
-		(start 34.875 64.59)
-		(end 49.31 64.59)
-		(width 0.2)
-		(layer "B.Cu")
-		(net 19)
-		(uuid "003b1f48-2409-4014-a02c-dc86cd7b0938")
-	)
-	(segment
-		(start 51.065 62.835)
+		(start 50.165 62.835)
 		(end 56.485 62.835)
 		(width 0.2)
 		(layer "B.Cu")
 		(net 19)
-		(uuid "5e6a5861-d702-47db-a2c2-df0b54bec281")
+		(uuid "3b44b229-7e75-4d8b-abf2-5ef70a709289")
 	)
 	(segment
 		(start 65.9 41.309744)
@@ -28897,14 +29086,6 @@
 		(layer "B.Cu")
 		(net 19)
 		(uuid "5e9573df-4e44-418b-be62-34d2816f5754")
-	)
-	(segment
-		(start 49.31 64.59)
-		(end 49.3375 64.5625)
-		(width 0.2)
-		(layer "B.Cu")
-		(net 19)
-		(uuid "7cc53076-6e4c-4e5c-8b84-643ef450bb36")
 	)
 	(segment
 		(start 61.75 45.459744)
@@ -28929,6 +29110,14 @@
 		(layer "B.Cu")
 		(net 19)
 		(uuid "902132bb-a323-4321-92be-57c0f60c33a9")
+	)
+	(segment
+		(start 44.3875 68.6125)
+		(end 50.165 62.835)
+		(width 0.2)
+		(layer "B.Cu")
+		(net 19)
+		(uuid "927a5772-9c86-4b40-a6e7-69aea61f9d47")
 	)
 	(segment
 		(start 69.575 35.215686)
@@ -28971,12 +29160,12 @@
 		(uuid "ce071a03-9c2d-4c48-89ca-cfe37524cdd6")
 	)
 	(segment
-		(start 49.3375 64.5625)
-		(end 51.065 62.835)
+		(start 42.1 68.6125)
+		(end 44.3875 68.6125)
 		(width 0.2)
 		(layer "B.Cu")
 		(net 19)
-		(uuid "f6e17ba0-437d-446d-8925-68439759ad5a")
+		(uuid "edf66eed-f06e-4b9f-b458-2ef0395e7e84")
 	)
 	(segment
 		(start 65.7125 28.8)
@@ -31465,6 +31654,22 @@
 		(layer "B.Cu")
 		(net 83)
 		(uuid "fae8a53f-5aa0-4bdc-a4db-3eebef3ad484")
+	)
+	(segment
+		(start 36.0625 67.7)
+		(end 35.2125 66.85)
+		(width 0.2)
+		(layer "B.Cu")
+		(net 84)
+		(uuid "1302c90f-d0e6-4b8f-9113-81d1f2916a6c")
+	)
+	(segment
+		(start 35.2125 66.85)
+		(end 35.2125 64.6)
+		(width 0.2)
+		(layer "B.Cu")
+		(net 84)
+		(uuid "9cd7f491-4ed4-4388-a87a-333e0ae4a778")
 	)
 	(zone
 		(net 12)

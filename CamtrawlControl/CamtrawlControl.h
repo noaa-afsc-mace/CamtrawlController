@@ -1,10 +1,9 @@
 /*
- *  CamtrawlControl is the firmware for the version of the CamTrawl power
- *  and control board that provides power management and control of the 
- *  3rd generation CamTrawl underwater stereo camera platform. These systems
- *  are based on the ARM based ODroid XU4 SBC and the Udoo X86 SBC and
- *  power and control logic is provided by either a ARM Cortex M0 based
- *  microcontroller or the Intel Curie microcontroller.
+ *  CamtrawlControl is the firmware for the 4th generation of the CamTrawl
+ *  power and control board that provides power management and control of the 
+ *  CamTrawl underwater stereo camera platform. The 4th gen systems are based
+ *  on the NVidia Jetson + ConnectTech Hadron carrier board and power and
+ *  control logic is provided by an ARM Cortex M0 based microcontroller.
  *  
  *  
  *  Rick Towler
@@ -19,26 +18,25 @@
 
 //  -----------            Platform options             --------------
 //  ---      Uncomment for specific control board versions         ---
+//
+//  Since the new controller does not plug directly into the SBC, there
+//  will probably not be any platform specific options but we'll keep
+//  this here for now.
 
-//  ODroid XU4 board uses A1 for external On/Off control
-//#define XU4
-
-//  UDOO-X86 control board uses A1 for the 5v DC/DC control
-#define UDOO
-
+//  Hadron
+#define HADRON
 
 
 //  -----------                 Version                 --------------
 //  --specify the PCB version - ignore the decimal - 2.3 becomes 23---
-//             UDOO VERSIONS SHOULD BE SET TO 23!!!!
-#define PCBVERSION  23
+#define PCBVERSION  11
 
 
 //  -----------           Debugging options             --------------
 //  -----------   !comment these for production use!    --------------
 
 //  uncomment to output debugging information to SAMD21 USB Serial console
-//#define DEBUGPRINT
+#define DEBUGPRINT
 
 //  uncomment to disable PC power control. When uncommented, the PC DC
 //  supply will be switched on when the MCU starts and will remain on
@@ -85,6 +83,7 @@
 #define DEPTHCHKDELAY     10000   //  interval in milliseconds the controller will delay checking the system depth
 #define INA260_I2CADDR    0x45    //  the INA260 installed on the controller has both addr pins pulled high
 
+
 //  define SAMD21 Mini pin connections
 const uint8_t powerEnable       = A2;         //  output pin - set high to enable system power (switched input power for Jetson Hadron)
 const uint8_t strobeEnable      = A3;         //  output pin - set high to enable strobe power
@@ -92,8 +91,8 @@ const uint8_t externalTrigger   = 8;          //  input pin pulled high - set lo
 const uint8_t switchedPower     = A1;         //  output pin - set high to enable switched 5v power (0.5A max)
 const uint8_t presssureSwitch   = 13;         //  input pin pulled high - goes low if pressure switch closes
 const uint8_t strobeTrigOne     = 10;         //  output pin - set high to trigger strobe channel 1
-const uint8_t mcu_gpio_1        = 9;          //  input/output pin - 
-const uint8_t mcu_gpio_2        = 11;          // input/output pin - 
+const uint8_t mcu_gpio_1        = 9;          //  generic input/output pin - DEFAULT: Input: External Shutdown - shuts down system when input is high
+const uint8_t mcu_gpio_2        = 11;          // genericinput/output pin - DEFAULT: None
 const uint8_t Cam2_GPIO1        = 4;          //  output pin - set high to trigger left camera
 const uint8_t Cam1_GPIO1        = 6;          //  output pin - set high to trigger right camera
 const uint8_t Cam2_GPIO2        = 5;          //  input/output pin - 
@@ -102,7 +101,6 @@ const uint8_t forceOn           = 12;         //  input pin pulled high - goes l
 const uint8_t statusLED         = A0;         //  output pin - connected to status LED black wire
 const uint8_t intOrLED          = PIN_LED_RXL;// RX LED on pin 25
 const uint8_t intGrLED          = PIN_LED_TXL;// TX LED on pin 26
-
 
 
 //  define default parameter values
@@ -137,8 +135,10 @@ float P2DLatitude         = 50.0;    //  Latitude used to convert pressure to de
 float P2DX                = 0.0;     //  stores the abs latitude in radians used when converting pressure to depth
 const float sysVConv      = 0.00139; //  A/D conversion factor for system voltage (Vin / rawADC value)
 
+
 //  sensor data variables
-float systemVoltage       = 0.0;     //  current system input voltage
+float systemVoltage       = 0.0;     //  current system input voltage in V
+float systemCurrent       = 0.0;     //  current system draw in mA (not including strobes)
 float auxADRaw            = 0.0;     //  current aux A/D input value
 float auxADVal            = 0.0;     //  current aux A/D input value
 float sysVRaw             = 0.0;     //  current raw system input voltage
@@ -151,6 +151,7 @@ float accelY              = 0.0;     //  current system liner accelleration in Y
 float accelZ              = 0.0;     //  current system liner accelleration in Z m/s^2
 float internalTemp        = 0.0;     //  current system temperature in C
 float externalTemp        = 0.0;     //  current water temperature in C
+
 
 //  define some utility variables
 bool grLEDState           = false;
@@ -199,11 +200,16 @@ FlashStorage(fsuseExtAD, uint8_t);
 
 
 //  define serial2 - D2-TX, D3-RX
+//  This enables a second Serial UART on the SAMD
 Uart Serial2 (&sercom2, 3, 2, SERCOM_RX_PAD_1, UART_TX_PAD_2);
 void SERCOM2_Handler()
 {
   Serial2.IrqHandler();
 }
+
+
+//  define the status LED object
+Adafruit_NeoPixel statusPixel(1, statusLED, NEO_GRB + NEO_KHZ800);
 
 //  define the current/voltage monitor object
 Adafruit_INA260       ina260;
@@ -228,7 +234,7 @@ RTC_DS3231              rtc;
 //  define running median objects for sensor data
 RunningMedian rawDepth = RunningMedian(NSENSORSAMPS);
 RunningMedian rawTemp = RunningMedian(NSENSORSAMPS);
-RunningMedian rawSystemVoltage = RunningMedian(NVOLTAGESAMPS);
+//RunningMedian rawSystemVoltage = RunningMedian(NVOLTAGESAMPS);
 RunningMedian rawAuxADValue = RunningMedian(NSENSORSAMPS);
 
 //  define the struct to hold the IMU calibration data

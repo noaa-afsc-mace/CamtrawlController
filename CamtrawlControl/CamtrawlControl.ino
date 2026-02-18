@@ -6,14 +6,15 @@
  *  control logic is provided by an ARM Cortex M0 based microcontroller.
  *  
  * Dependencies:
- *   Adafruit_Sensor at version ?
- *   Adafruit_BNO055 at version ?
- *   Adafruit_ADS1X15 at version ?
- *   Adafruit INA260
+ *   Adafruit_Unified_Sensor at version 1.1.15
+ *   Adafruit_BNO055 at version 1.6.4
+ *   Adafruit_ADS1X15 at version 2.6.2
+ *   Adafruit INA260 at version 1.5.3
+ *   Adafruit RTClib at version 2.1.4
+ *   Adafruit NeoPixel at version 1.15.4
  *   Serial1Command (modified SerialCommand to output to Serial1)
- *   RunningMedian
+ *   RunningMedian 0.3.10
  *   FlashStorage at version ?
- *   RTClib at version ?
  *
  *   
  *  Rick Towler
@@ -31,7 +32,7 @@ void setup()
   pinMode(strobeEnable, OUTPUT);
   pinMode(switchedPower, OUTPUT);
   pinMode(externalTrigger, INPUT);
-  pinMode(mcu_gpio_1, INPUT_PULLUP);
+  pinMode(mcu_gpio_1, INPUT_PULLDOWN);
   pinMode(mcu_gpio_2, OUTPUT);
   pinMode(forceOn, INPUT);
   pinMode(presssureSwitch, INPUT);
@@ -177,6 +178,13 @@ void setup()
     fsConfigured.write(PARMSPROG);
   }
 
+  //  set up the status LED which is a single neopixel LED
+  //  start up color is purple (160, 0, 240)
+  statusPixel.begin();
+  statusPixel.clear();
+  statusPixel.setPixelColor(1, statusPixel.Color(160, 0, 240));
+  statusPixel.show();
+
   //  start the IMU, let it settle, and set it to use the external crystal
   DEBUG_PRINT("Check for IMU...");
   if (imuSensor.begin())
@@ -210,24 +218,23 @@ void setup()
   }
 
   DEBUG_PRINT("Check for INA260...");
-  if (ina260.begin(i2c_addr=INA260_I2CADDR))
+  if (ina260.begin(INA260_I2CADDR))
   {
     INAInstalled = 1;
     DEBUG_PRINT("INA260 found.");
 
-    //  set a fast conversion time, but average over 256 samples (~36 ms update interval)
-    ina260.setAveragingCount(INA260_COUNT_256);
-    ina260.setVoltageConversionTime(INA260_TIME_140_us);
-    ina260.setCurrentConversionTime(INA260_TIME_140_us);
+    //  set a faster conversion time, but average over 4 samples
+    ina260.setAveragingCount(INA260_COUNT_4);
+    ina260.setVoltageConversionTime(INA260_TIME_332_us);
+    ina260.setCurrentConversionTime(INA260_TIME_332_us);
 
     //  wait for the sensor to take first reading
     delay(50);
 
     //  report first reading
-    n = ina260.readCurrent() / 1000.;
-    m = ina260.readBusVoltage() / 1000.;
-    o = ina260.readPower() / 1000.;
-    DEBUG_PRINT(String("  Voltage:") + String(m,2) + String("V  Current:") + String(n,2) + String("A  Power:") + String(o,2) + String("W"));
+    DEBUG_PRINT(String("  Voltage:") + String(ina260.readBusVoltage(),2) +
+        String("mV  Current:") + String(ina260.readCurrent(),2) + String("mA  Power:") +
+        String(ina260.readPower(),2) + String("mW"));
 
   }
   else
@@ -380,16 +387,9 @@ void setup()
 
   //  get the initial voltage values
   DEBUG_PRINT("Getting initial system voltage readings...");
-  n = 1;
-  while (n <= NVOLTAGESAMPS)
-  {
-    //  read the system and external voltages
-    rawSystemVoltage.add(ads1115.readADC_SingleEnded(2));
-    ++n;
-    delay(50);
-  }
-  //  get the mean of the 3 median values and convert to a voltage
-  systemVoltage = rawSystemVoltage.getAverage(3) * sysVConv;
+
+  //  get the initial system voltage value
+  systemVoltage = ina260.readBusVoltage();
 
   //  initialize the voltage samping interval counter
   vSampCounter = millis();
@@ -434,7 +434,8 @@ void loop()
 
   //  check the system voltage - we will not start if the system
   //  voltage is below the cutoff voltage
-  DEBUG_PRINT(String("Current system voltage value:") + String(systemVoltage));
+  DEBUG_PRINT(String("Current system voltage and current:") + String(systemVoltage,2) +
+      String(" V at ")+ String(systemCurrent,2) + String(" mA"));
   if (monitorVoltage)
   {
     //  check if the systemVoltage is below the cutoff
@@ -456,12 +457,12 @@ void loop()
     DEBUG_PRINT("Controller in standby due to external sutdown signal");
     delay(1000);
     greenLEDOff();
-    extShutdownState = digitalRead(externalShutdown);
+    extShutdownState = digitalRead(mcu_gpio_1);
     if (!extShutdownState)
     {
       //  debounce
       delay(500);
-      extShutdownState = digitalRead(externalShutdown);
+      extShutdownState = digitalRead(mcu_gpio_1);
       if (!extShutdownState)
         //  we can now turn back on
         controllerState = SLEEP;
@@ -588,11 +589,10 @@ void loop()
     digitalWrite(powerEnable, HIGH);
 #endif
 
-    //  turn on AUX 5v (Udoo x86 systems only)
+    //  turn on AUX 5v 
     DEBUG_PRINT("Turning on Aux 5v power");
     digitalWrite(switchedPower, HIGH);
 
-    
     //  wait here until the PC responds that it is ready. We wait either
     //  until the PC sends the ready signal (PCState variable changes) or
     //  until we timeout.
@@ -786,7 +786,7 @@ void loop()
       digitalWrite(powerEnable, LOW);
 #endif
 
-    //  turn off AUX 5v (Udoo x86 systems only)
+    //  turn off AUX 5v
     DEBUG_PRINT("Turning off Aux 5v power");
     digitalWrite(switchedPower, LOW);
 
@@ -838,12 +838,12 @@ void loop()
         DEBUG_PRINT("Controller in standby due to external sutdown signal-1");
         delay(1000);
         greenLEDOff();
-        extShutdownState = digitalRead(externalShutdown);
+        extShutdownState = digitalRead(mcu_gpio_1);
         if (!extShutdownState)
         {
           //  debounce
           delay(500);
-          extShutdownState = digitalRead(externalShutdown);
+          extShutdownState = digitalRead(mcu_gpio_1);
           if (!extShutdownState)
             //  we can now turn back on
             controllerState = SLEEP;
@@ -1005,7 +1005,7 @@ void sampleSensors()
       //  update the state of the force-on, pressure switch, and external shutdown pins
       forceOnState = !digitalRead(forceOn);
       pSwitchState = !digitalRead(presssureSwitch);
-      extShutdownState = digitalRead(externalShutdown);
+      extShutdownState = digitalRead(mcu_gpio_1);
       
       //  toggle the polling state
       pollSensors = false;
@@ -1091,12 +1091,10 @@ void sampleSensors()
       //  check if we should update the system voltage and IMU status
       if ((millis() - vSampCounter) > VOLTSAMPINT)
       {
-        //  read the system and external voltages
-        rawSystemVoltage.add(ads1115.readADC_SingleEnded(2));
-      
-        //  get the mean of the 3 median values and convert to a voltage
-        sysVRaw = rawSystemVoltage.getAverage(3);
-        systemVoltage = sysVRaw * sysVConv;
+
+        //  get the current (in mA) and voltage (in V) readings
+        systemVoltage = ina260.readBusVoltage() / 1000;
+        systemCurrent = ina260.readCurrent();
   
         if (IMUInstalled)
           //  read the IMU calibration state
@@ -1120,6 +1118,7 @@ void sampleSensors()
           Serial1.print("$CTSV,");
           Serial1.print(sysVRaw, 4); Serial1.print(",");
           Serial1.print(systemVoltage, 4); Serial1.print(",");
+          Serial1.println(internalTemp, 2); Serial1.print(",");
           Serial1.println(internalTemp, 2);
         
           //  send the IMU calibration status
@@ -2117,55 +2116,68 @@ void turnOffStrobes()
   }
 }
 
+//  ALL OF THESE LED METHODS SHOULD BE RETHOUGHT NOW THAT WE'RE USING A NEOPIXEL
+//  FOR NOW I HAVE JUST KEPT THE RED/GREEN FUNCTIONALITY FROM THE ORIGINAL BOARD
+
 void greenLEDOn()
 {
   grLEDState = true;
-  digitalWriteDirect(statusLEDRed, grLEDState);
-  digitalWriteDirect(statusLEDBlk, false);
   digitalWriteDirect(intGrLED, !grLEDState);
+  statusPixel.clear();
+  statusPixel.setPixelColor(1, statusPixel.Color(0, 255, 0));
+  statusPixel.show();
 }
 
 
 void greenLEDOff()
 {
   grLEDState = false;
-  digitalWriteDirect(statusLEDRed, grLEDState);
   digitalWriteDirect(intGrLED, !grLEDState);
-  
+  statusPixel.clear();
+  statusPixel.show();
 }
 
 
 void toggleGreenLED()
 {
   grLEDState = !grLEDState;
-  digitalWriteDirect(statusLEDRed, grLEDState);
   digitalWriteDirect(intGrLED, !grLEDState);
+  if (grLEDState)
+    statusPixel.setPixelColor(1, statusPixel.Color(0, 255, 0));
+  else
+    statusPixel.clear();
+  statusPixel.show();
 }
 
 
 void redLEDOn()
 {
   rdLEDState = true;
-  digitalWriteDirect(statusLEDBlk, rdLEDState);
-  digitalWriteDirect(statusLEDRed, false);
   digitalWriteDirect(intOrLED, !rdLEDState);
-  
+  statusPixel.clear();
+  statusPixel.setPixelColor(1, statusPixel.Color(0, 255, 0));
+  statusPixel.show();
 }
 
 
 void redLEDOff()
 {
   rdLEDState = false;
-  digitalWriteDirect(statusLEDBlk, rdLEDState);
   digitalWriteDirect(intOrLED, !rdLEDState);
+  statusPixel.clear();
+  statusPixel.show();
 }
 
 
 void toggleRedLED()
 {
   rdLEDState = !rdLEDState;
-  digitalWriteDirect(statusLEDBlk, rdLEDState);
   digitalWriteDirect(intOrLED, !rdLEDState);
+  if (rdLEDState)
+    statusPixel.setPixelColor(1, statusPixel.Color(255, 0, 0));
+  else
+    statusPixel.clear();
+  statusPixel.show();
 }
 
 
