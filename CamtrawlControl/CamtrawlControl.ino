@@ -232,8 +232,8 @@ void setup()
     delay(50);
 
     //  report first reading
-    DEBUG_PRINT(String("  Voltage:") + String(ina260.readBusVoltage(),2) +
-        String("mV  Current:") + String(ina260.readCurrent(),2) + String("mA  Power:") +
+    DEBUG_PRINT(String("  Voltage:") + String(ina260.readBusVoltage() / 1000.,2) +
+        String("V  Current:") + String(ina260.readCurrent(),2) + String("mA  Power:") +
         String(ina260.readPower(),2) + String("mW"));
 
   }
@@ -389,7 +389,7 @@ void setup()
   DEBUG_PRINT("Getting initial system voltage readings...");
 
   //  get the initial system voltage value
-  systemVoltage = ina260.readBusVoltage();
+  systemVoltage = ina260.readBusVoltage() / 1000.;
 
   //  initialize the voltage samping interval counter
   vSampCounter = millis();
@@ -1034,6 +1034,8 @@ void sampleSensors()
         yaw = imuVect.x();
         pitch = -imuVect.z();
         roll = imuVect.y();
+
+        DEBUG_PRINT(String("PITCH: ") + String(pitch) );
     
         //  and the internal temp
         internalTemp = imuSensor.getTemp();
@@ -1048,6 +1050,7 @@ void sampleSensors()
       {
         // i2c sensor installed - readout and convert 
         pSensor.convertData();
+        DEBUG_PRINT(String("RAW PRESSURE: ") + String(pSensor.rawPressure) );
         rawDepth.add(pSensor.pressure);
         rawTemp.add(pSensor.temperature);
   
@@ -1119,7 +1122,7 @@ void sampleSensors()
           Serial1.print(sysVRaw, 4); Serial1.print(",");
           Serial1.print(systemVoltage, 4); Serial1.print(",");
           Serial1.println(internalTemp, 2); Serial1.print(",");
-          Serial1.println(internalTemp, 2);
+          Serial1.println(systemCurrent, 1);
         
           //  send the IMU calibration status
           /*
