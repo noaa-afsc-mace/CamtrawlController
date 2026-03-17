@@ -41,7 +41,7 @@ const uint8_t   blueLED = 4;
 
 bool            ok;
 uint8_t         i = 0;
-uint8_t         sys_mode = 0;             //  the camera system mode: 0 = no plug installed, 1 = force-on installed, 2 = pressure switch closed)
+uint8_t         sys_mode = 0;             //  the camera system mode: 0 = no plug installed, 1 = force-on installed, 2 = pressure switch closed
 uint8_t         op_mode = 0;              //  the RTO operating mode: 0 = does not retain sys_mode between power cycles. 1 = DOES retain sys_mode
 
 

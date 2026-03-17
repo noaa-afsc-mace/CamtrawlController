@@ -11,7 +11,6 @@
  *   Adafruit_ADS1X15 at version 2.6.2
  *   Adafruit INA260 at version 1.5.3
  *   Adafruit RTClib at version 2.1.4
- *   Adafruit NeoPixel at version 1.15.4
  *   Serial1Command (modified SerialCommand to output to Serial1)
  *   RunningMedian 0.3.10
  *   FlashStorage at version ?
@@ -33,11 +32,11 @@ void setup()
   pinMode(switchedPower, OUTPUT);
   pinMode(externalTrigger, INPUT);
   pinMode(mcu_gpio_1, INPUT_PULLDOWN);
-  pinMode(mcu_gpio_2, OUTPUT);
+  pinMode(statusLEDBlk, OUTPUT);
   pinMode(forceOn, INPUT);
   pinMode(presssureSwitch, INPUT);
   pinMode(strobeTrigOne, OUTPUT);
-  pinMode(statusLED, OUTPUT);
+  pinMode(statusLEDRed, OUTPUT);
   pinMode(Cam2_GPIO1, OUTPUT);
   pinMode(Cam1_GPIO1, OUTPUT);
   pinMode(Cam2_GPIO2, INPUT);
@@ -46,8 +45,8 @@ void setup()
   digitalWrite(strobeEnable, LOW);
   digitalWrite(strobeTrigOne, LOW);
   digitalWrite(switchedPower, LOW);
-  digitalWrite(mcu_gpio_2, LOW);
-  digitalWrite(statusLED, LOW);
+  digitalWrite(statusLEDBlk, LOW);
+  digitalWrite(statusLEDRed, LOW);
   digitalWrite(Cam2_GPIO1, LOW);
   digitalWrite(Cam1_GPIO1, LOW);
   //  these pins have inverted logic
@@ -177,13 +176,6 @@ void setup()
     fsuseExtAD.write(useExtAD);
     fsConfigured.write(PARMSPROG);
   }
-
-  //  set up the status LED which is a single neopixel LED
-  //  start up color is purple (160, 0, 240)
-  statusPixel.begin();
-  statusPixel.clear();
-  statusPixel.setPixelColor(1, statusPixel.Color(160, 0, 240));
-  statusPixel.show();
 
   //  start the IMU, let it settle, and set it to use the external crystal
   DEBUG_PRINT("Check for IMU...");
@@ -971,9 +963,9 @@ void parkSystem()
 
 
 /*
- * sampleSensors polls or reads and transmits data from the attitude and
- * pressure sensors. It also tracks the state of the force-on and pressure
- * switch pins.
+ * sampleSensors polls or reads and transmits data from the attitude, voltage
+ * and current, and pressure sensors. It also tracks the state of the force-on
+ * and pressure switch pins.
  * 
  * The i2c based PA4LD pressure sensor must be commanded to take a sample
  * before you can read out the data. The conversion takes up to 8ms so this
@@ -1050,7 +1042,6 @@ void sampleSensors()
       {
         // i2c sensor installed - readout and convert 
         pSensor.convertData();
-        DEBUG_PRINT(String("RAW PRESSURE: ") + String(pSensor.rawPressure) );
         rawDepth.add(pSensor.pressure);
         rawTemp.add(pSensor.temperature);
   
@@ -1117,11 +1108,11 @@ void sampleSensors()
         if (acquiring)
         {
           //  send the system voltage and internal temp message
-          //$CTSV, <raw system voltage>, <system voltage>, <internal temp>/n
+          //$CTSV, <raw system voltage>, <system voltage>, <internal temp>, <current draw>/n
           Serial1.print("$CTSV,");
           Serial1.print(sysVRaw, 4); Serial1.print(",");
           Serial1.print(systemVoltage, 4); Serial1.print(",");
-          Serial1.println(internalTemp, 2); Serial1.print(",");
+          Serial1.print(internalTemp, 2); Serial1.print(",");
           Serial1.println(systemCurrent, 1);
         
           //  send the IMU calibration status
@@ -1167,9 +1158,15 @@ void sampleSensors()
  * 
  * trigger,<strobe pre fire as int>,<strobe 1 exposure as int>,<strobe 2 exposure as int>,<left cam trig as int>,<right cam trig as int>\n
  * 
- * positive strobe pre-fire values delay the camera triggering. Set to 0 to trigger the cameras first
- * set left/right trigger values to 0 to not trigger that camera
- * set strobe duration to 0 to not trigger that channel
+ * positive strobe pre-fire values delay the camera triggering to allow the strobes to
+ * ramp to full output (suitable for LED strobes). Set to 0 to trigger the cameras first
+ * (suitable for xenon based strobes). Set left/right trigger values to 0 to not trigger
+ * that camera set strobe duration to 0 to not trigger that channel
+ *
+ * NOTE - The v4 CamtrawlController only supports a single strobe trigger channel. We
+ *        are not changing the trigger command to ensure compatibility with systems
+ *        that do support multi-channel strobe triggering but in this version of the
+ *        firmware, the strobe 2 exposure is ignored.
  * 
  */
 void trigger()
@@ -1197,6 +1194,8 @@ void trigger()
   strobe1Exp = atoi(arg);
 
   //  read in the strobe channel 2 exposure value and convert to int
+  //  NOTE! - The v4 CamtrawlController dropped support for multiple
+  //          strobe trigger channels so this value is never used.
   arg = sCmd.next();
   strobe2Exp = atoi(arg);
 
@@ -2119,68 +2118,56 @@ void turnOffStrobes()
   }
 }
 
-//  ALL OF THESE LED METHODS SHOULD BE RETHOUGHT NOW THAT WE'RE USING A NEOPIXEL
-//  FOR NOW I HAVE JUST KEPT THE RED/GREEN FUNCTIONALITY FROM THE ORIGINAL BOARD
 
 void greenLEDOn()
 {
   grLEDState = true;
+  digitalWriteDirect(statusLEDRed, grLEDState);
+  digitalWriteDirect(statusLEDBlk, false);
   digitalWriteDirect(intGrLED, !grLEDState);
-  statusPixel.clear();
-  statusPixel.setPixelColor(1, statusPixel.Color(0, 255, 0));
-  statusPixel.show();
 }
 
 
 void greenLEDOff()
 {
   grLEDState = false;
+  digitalWriteDirect(statusLEDRed, grLEDState);
   digitalWriteDirect(intGrLED, !grLEDState);
-  statusPixel.clear();
-  statusPixel.show();
+  
 }
 
 
 void toggleGreenLED()
 {
   grLEDState = !grLEDState;
+  digitalWriteDirect(statusLEDRed, grLEDState);
   digitalWriteDirect(intGrLED, !grLEDState);
-  if (grLEDState)
-    statusPixel.setPixelColor(1, statusPixel.Color(0, 255, 0));
-  else
-    statusPixel.clear();
-  statusPixel.show();
 }
 
 
 void redLEDOn()
 {
   rdLEDState = true;
+  digitalWriteDirect(statusLEDBlk, rdLEDState);
+  digitalWriteDirect(statusLEDRed, false);
   digitalWriteDirect(intOrLED, !rdLEDState);
-  statusPixel.clear();
-  statusPixel.setPixelColor(1, statusPixel.Color(0, 255, 0));
-  statusPixel.show();
+  
 }
 
 
 void redLEDOff()
 {
   rdLEDState = false;
+  digitalWriteDirect(statusLEDBlk, rdLEDState);
   digitalWriteDirect(intOrLED, !rdLEDState);
-  statusPixel.clear();
-  statusPixel.show();
 }
 
 
 void toggleRedLED()
 {
   rdLEDState = !rdLEDState;
+  digitalWriteDirect(statusLEDBlk, rdLEDState);
   digitalWriteDirect(intOrLED, !rdLEDState);
-  if (rdLEDState)
-    statusPixel.setPixelColor(1, statusPixel.Color(255, 0, 0));
-  else
-    statusPixel.clear();
-  statusPixel.show();
 }
 
 

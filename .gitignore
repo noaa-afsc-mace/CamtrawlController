@@ -48,3 +48,5 @@ Thumbs.db
 *-backups/
 *-info-cache
 *.lck
+
+*.TMP

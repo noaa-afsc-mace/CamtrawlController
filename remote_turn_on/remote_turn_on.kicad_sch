@@ -2560,28 +2560,6 @@
 		)
 		(uuid "f42d38d4-7ae1-4fb0-a671-f9208586fc5e")
 	)
-	(global_label "Cam Status +"
-		(shape input)
-		(at 76.2 128.27 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "11a84bf9-b213-471e-bb58-036e1b9af49e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 59.6079 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "Hall Switch"
 		(shape input)
 		(at 105.41 59.69 0)
@@ -2600,6 +2578,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Cam Status -"
+		(shape input)
+		(at 76.2 128.27 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "25f36165-9898-473e-b08b-103f0a8f436c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 59.6079 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -2692,28 +2692,6 @@
 			)
 		)
 	)
-	(global_label "Cam Status +"
-		(shape input)
-		(at 167.64 107.95 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "5b0d19ab-f8f8-48bf-a57e-769f4d63efbb")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 184.2321 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "RTO Status Yellow"
 		(shape input)
 		(at 105.41 69.85 0)
@@ -2732,28 +2710,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "Cam Status -"
-		(shape input)
-		(at 152.4 107.95 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "725ddc5b-6041-45b2-abb2-c43ca2c58311")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 135.8079 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 				(hide yes)
 			)
 		)
@@ -2820,6 +2776,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Cam Status +"
+		(shape input)
+		(at 76.2 130.81 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ac08aad3-4f13-406d-85cf-1f09360f059f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 59.6079 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -2912,6 +2890,28 @@
 			)
 		)
 	)
+	(global_label "Cam Status +"
+		(shape input)
+		(at 152.4 107.95 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "bfea387a-6958-40ee-91d8-326ecbf5401c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 135.8079 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "PGM_PB0"
 		(shape input)
 		(at 105.41 62.23 0)
@@ -2978,28 +2978,6 @@
 			)
 		)
 	)
-	(global_label "Cam Status -"
-		(shape input)
-		(at 76.2 130.81 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "d8760851-ea29-470b-ba60-1794705ce23d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 59.6079 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "RTO Status Blue"
 		(shape input)
 		(at 105.41 72.39 0)
@@ -3013,6 +2991,28 @@
 		(uuid "e84ce67e-a6f0-4142-9c5a-753296c3451a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 124.0583 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Cam Status -"
+		(shape input)
+		(at 167.64 107.95 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ebc817e9-4bed-4926-b1f2-71fb1f0ecf0e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 184.2321 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3270,7 +3270,7 @@
 				)
 			)
 		)
-		(property "Value" "200"
+		(property "Value" "220"
 			(at 233.934 107.696 90)
 			(effects
 				(font
@@ -3494,7 +3494,7 @@
 				)
 			)
 		)
-		(property "Value" "MLX92231LSE"
+		(property "Value" "MLX92231LSE-AAA-009"
 			(at 231.14 59.69 0)
 			(effects
 				(font
@@ -3973,7 +3973,7 @@
 				)
 			)
 		)
-		(property "Value" "200"
+		(property "Value" "220"
 			(at 233.426 120.65 90)
 			(effects
 				(font
@@ -4033,7 +4033,7 @@
 		(dnp no)
 		(uuid "eaa5e9ff-0505-45af-8cca-dae11753abc0")
 		(property "Reference" "U1"
-			(at 76.2 68.5799 0)
+			(at 88.9 70.104 0)
 			(effects
 				(font
 					(size 1.27 1.27)

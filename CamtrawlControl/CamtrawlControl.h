@@ -1,9 +1,9 @@
 /*
- *  CamtrawlControl is the firmware for the 4th generation of the CamTrawl
- *  power and control board that provides power management and control of the 
- *  CamTrawl underwater stereo camera platform. The 4th gen systems are based
- *  on the NVidia Jetson + ConnectTech Hadron carrier board and power and
- *  control logic is provided by an ARM Cortex M0 based microcontroller.
+ *  CamtrawlControl is the firmware for the CamTrawl controller that provides
+ *  power management and control of the CamTrawl underwater stereo camera
+ *  platform. The 4th gen systems are based on the NVidia Jetson + ConnectTech
+ *  Hadron carrier board and power and control logic is provided by an ARM
+ *  Cortex M0 based microcontroller.
  *  
  *  
  *  Rick Towler
@@ -23,20 +23,19 @@
 //  will probably not be any platform specific options but we'll keep
 //  this here for now.
 
-//  Hadron
+//  ConnectTech Hadron carrier with nVidia Orin
 #define HADRON
-
 
 //  -----------                 Version                 --------------
 //  --specify the PCB version - ignore the decimal - 2.3 becomes 23---
-#define PCBVERSION  11
+#define PCBVERSION  12
 
 
 //  -----------           Debugging options             --------------
 //  -----------   !comment these for production use!    --------------
 
 //  uncomment to output debugging information to SAMD21 USB Serial console
-#define DEBUGPRINT
+//#define DEBUGPRINT
 
 //  uncomment to disable PC power control. When uncommented, the PC DC
 //  supply will be switched on when the MCU starts and will remain on
@@ -52,7 +51,6 @@
 #include <Adafruit_Sensor.h> 
 #include <Adafruit_BNO055.h>
 #include <Adafruit_ADS1X15.h>
-#include <Adafruit_NeoPixel.h>
 #include <Adafruit_INA260.h>
 #include <utility/imumaths.h>
 #include <Serial1Command.h>
@@ -92,13 +90,13 @@ const uint8_t switchedPower     = A1;         //  output pin - set high to enabl
 const uint8_t presssureSwitch   = 13;         //  input pin pulled high - goes low if pressure switch closes
 const uint8_t strobeTrigOne     = 10;         //  output pin - set high to trigger strobe channel 1
 const uint8_t mcu_gpio_1        = 9;          //  generic input/output pin - DEFAULT: Input: External Shutdown - shuts down system when input is high
-const uint8_t mcu_gpio_2        = 11;          // genericinput/output pin - DEFAULT: None
 const uint8_t Cam2_GPIO1        = 4;          //  output pin - set high to trigger left camera
 const uint8_t Cam1_GPIO1        = 6;          //  output pin - set high to trigger right camera
 const uint8_t Cam2_GPIO2        = 5;          //  input/output pin - 
 const uint8_t Cam1_GPIO2        = 7;          //  input/output pin - 
 const uint8_t forceOn           = 12;         //  input pin pulled high - goes low if force-on plug is installed
-const uint8_t statusLED         = A0;         //  output pin - connected to status LED black wire
+const uint8_t statusLEDBlk      = A0;         //  output pin - connected to status LED black wire
+const uint8_t statusLEDRed      = 11;         //  output pin - connected to status LED red wire
 const uint8_t intOrLED          = PIN_LED_RXL;// RX LED on pin 25
 const uint8_t intGrLED          = PIN_LED_TXL;// TX LED on pin 26
 
@@ -207,9 +205,6 @@ void SERCOM2_Handler()
   Serial2.IrqHandler();
 }
 
-
-//  define the status LED object
-Adafruit_NeoPixel statusPixel(1, statusLED, NEO_GRB + NEO_KHZ800);
 
 //  define the current/voltage monitor object
 Adafruit_INA260       ina260;
