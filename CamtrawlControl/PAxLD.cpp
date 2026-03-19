@@ -56,7 +56,7 @@ bool PAxLD::init()
 
   //  combine the two 16 bit values and convert to float
   tempX.i = (temp0 << 16) + temp1;
-  pMax = (float) tempX.f;
+  pMin = (float) tempX.f;
 
   //  now get the Pmax scaling value
   delay(10);
