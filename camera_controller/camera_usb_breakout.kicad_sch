@@ -5370,7 +5370,7 @@
 			)
 		)
 	)
-	(global_label "Status LED-"
+	(global_label "Status LED G"
 		(shape input)
 		(at 53.34 184.15 180)
 		(fields_autoplaced yes)
@@ -5382,7 +5382,7 @@
 		)
 		(uuid "4ff9add9-6c41-42b9-a710-1b8278295e5b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 38.3807 184.15 0)
+			(at 38.3697 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5436,7 +5436,7 @@
 			)
 		)
 	)
-	(global_label "CAM2 GPIO 1"
+	(global_label "CAM2 GPIO 0"
 		(shape input)
 		(at 36.83 142.24 180)
 		(fields_autoplaced yes)
@@ -5448,7 +5448,7 @@
 		)
 		(uuid "67efc688-4b1b-4e44-9447-f36246fb2c5d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 21.2053 142.24 0)
+			(at 21.8595 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5722,7 +5722,7 @@
 			)
 		)
 	)
-	(global_label "CAM 2 GPIO 2"
+	(global_label "CAM 2 GPIO 1"
 		(shape input)
 		(at 43.18 148.59 180)
 		(fields_autoplaced yes)
@@ -5734,7 +5734,7 @@
 		)
 		(uuid "a779151f-bd64-494b-b5b2-683a44a418fc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 26.5877 148.59 0)
+			(at 27.2419 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5854,7 +5854,7 @@
 			)
 		)
 	)
-	(global_label "CAM1 GPIO 1"
+	(global_label "CAM1 GPIO 0"
 		(shape input)
 		(at 36.83 123.19 180)
 		(fields_autoplaced yes)
@@ -5866,7 +5866,7 @@
 		)
 		(uuid "e420b467-5b1f-4319-9fd3-ae1d6c2d2177")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 21.2053 123.19 0)
+			(at 21.8595 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5876,7 +5876,7 @@
 			)
 		)
 	)
-	(global_label "Status LED+"
+	(global_label "Status LED R"
 		(shape input)
 		(at 53.34 181.61 180)
 		(fields_autoplaced yes)
@@ -5888,7 +5888,7 @@
 		)
 		(uuid "ecc83ec7-2ec3-4b7c-aedf-9d6faee394c8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 38.3807 181.61 0)
+			(at 38.3697 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5920,7 +5920,7 @@
 			)
 		)
 	)
-	(global_label "CAM 1 GPIO 2"
+	(global_label "CAM 1 GPIO 1"
 		(shape input)
 		(at 43.18 129.54 180)
 		(fields_autoplaced yes)
@@ -5932,7 +5932,7 @@
 		)
 		(uuid "f439c108-bf9e-4206-8b75-985f7d03edbb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 26.5877 129.54 0)
+			(at 27.2419 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)

@@ -32,11 +32,11 @@ void setup()
   pinMode(switchedPower, OUTPUT);
   pinMode(externalTrigger, INPUT);
   pinMode(mcu_gpio_1, INPUT_PULLDOWN);
-  pinMode(statusLEDBlk, OUTPUT);
+  pinMode(statusLEDRed, OUTPUT);
   pinMode(forceOn, INPUT);
   pinMode(presssureSwitch, INPUT);
   pinMode(strobeTrigOne, OUTPUT);
-  pinMode(statusLEDRed, OUTPUT);
+  pinMode(statusLEDGreen, OUTPUT);
   pinMode(Cam2_GPIO1, OUTPUT);
   pinMode(Cam1_GPIO1, OUTPUT);
   pinMode(Cam2_GPIO2, INPUT);
@@ -45,8 +45,8 @@ void setup()
   digitalWrite(strobeEnable, LOW);
   digitalWrite(strobeTrigOne, LOW);
   digitalWrite(switchedPower, LOW);
-  digitalWrite(statusLEDBlk, LOW);
   digitalWrite(statusLEDRed, LOW);
+  digitalWrite(statusLEDGreen, LOW);
   digitalWrite(Cam2_GPIO1, LOW);
   digitalWrite(Cam1_GPIO1, LOW);
   //  these pins have inverted logic
@@ -2122,8 +2122,8 @@ void turnOffStrobes()
 void greenLEDOn()
 {
   grLEDState = true;
-  digitalWriteDirect(statusLEDRed, grLEDState);
-  digitalWriteDirect(statusLEDBlk, false);
+  digitalWriteDirect(statusLEDGreen, grLEDState);
+  digitalWriteDirect(statusLEDRed, false);
   digitalWriteDirect(intGrLED, !grLEDState);
 }
 
@@ -2131,7 +2131,7 @@ void greenLEDOn()
 void greenLEDOff()
 {
   grLEDState = false;
-  digitalWriteDirect(statusLEDRed, grLEDState);
+  digitalWriteDirect(statusLEDGreen, grLEDState);
   digitalWriteDirect(intGrLED, !grLEDState);
   
 }
@@ -2140,7 +2140,7 @@ void greenLEDOff()
 void toggleGreenLED()
 {
   grLEDState = !grLEDState;
-  digitalWriteDirect(statusLEDRed, grLEDState);
+  digitalWriteDirect(statusLEDGreen, grLEDState);
   digitalWriteDirect(intGrLED, !grLEDState);
 }
 
@@ -2148,8 +2148,8 @@ void toggleGreenLED()
 void redLEDOn()
 {
   rdLEDState = true;
-  digitalWriteDirect(statusLEDBlk, rdLEDState);
-  digitalWriteDirect(statusLEDRed, false);
+  digitalWriteDirect(statusLEDRed, rdLEDState);
+  digitalWriteDirect(statusLEDGreen, false);
   digitalWriteDirect(intOrLED, !rdLEDState);
   
 }
@@ -2158,7 +2158,7 @@ void redLEDOn()
 void redLEDOff()
 {
   rdLEDState = false;
-  digitalWriteDirect(statusLEDBlk, rdLEDState);
+  digitalWriteDirect(statusLEDRed, rdLEDState);
   digitalWriteDirect(intOrLED, !rdLEDState);
 }
 
@@ -2166,7 +2166,7 @@ void redLEDOff()
 void toggleRedLED()
 {
   rdLEDState = !rdLEDState;
-  digitalWriteDirect(statusLEDBlk, rdLEDState);
+  digitalWriteDirect(statusLEDRed, rdLEDState);
   digitalWriteDirect(intOrLED, !rdLEDState);
 }
 

@@ -609,6 +609,19 @@
     "subpart_first_id": 65,
     "subpart_id_separator": 0
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "22784c82-9130-447b-8fbc-975376df6385",
+      "Root"
+    ],
+    [
+      "75aa1298-d9a6-4abf-a077-b08475defc3c",
+      "controller_page_2"
+    ],
+    [
+      "961a2c25-23bd-45c4-b9c2-16e5baa84065",
+      "camera USB breakout"
+    ]
+  ],
   "text_variables": {}
 }

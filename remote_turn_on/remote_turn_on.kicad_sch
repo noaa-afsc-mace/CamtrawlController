@@ -2582,7 +2582,7 @@
 			)
 		)
 	)
-	(global_label "Cam Status -"
+	(global_label "Cam Status G"
 		(shape input)
 		(at 76.2 128.27 180)
 		(fields_autoplaced yes)
@@ -2594,7 +2594,7 @@
 		)
 		(uuid "25f36165-9898-473e-b08b-103f0a8f436c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 59.6079 128.27 0)
+			(at 59.9103 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2780,7 +2780,7 @@
 			)
 		)
 	)
-	(global_label "Cam Status +"
+	(global_label "Cam Status R"
 		(shape input)
 		(at 76.2 130.81 180)
 		(fields_autoplaced yes)
@@ -2792,7 +2792,7 @@
 		)
 		(uuid "ac08aad3-4f13-406d-85cf-1f09360f059f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 59.6079 130.81 0)
+			(at 59.9103 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2890,7 +2890,7 @@
 			)
 		)
 	)
-	(global_label "Cam Status +"
+	(global_label "Cam Status R"
 		(shape input)
 		(at 152.4 107.95 180)
 		(fields_autoplaced yes)
@@ -2902,7 +2902,7 @@
 		)
 		(uuid "bfea387a-6958-40ee-91d8-326ecbf5401c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 135.8079 107.95 0)
+			(at 136.1103 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3000,7 +3000,7 @@
 			)
 		)
 	)
-	(global_label "Cam Status -"
+	(global_label "Cam Status G"
 		(shape input)
 		(at 167.64 107.95 0)
 		(fields_autoplaced yes)
@@ -3012,7 +3012,7 @@
 		)
 		(uuid "ebc817e9-4bed-4926-b1f2-71fb1f0ecf0e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 184.2321 107.95 0)
+			(at 183.9297 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)

@@ -95,8 +95,8 @@ const uint8_t Cam1_GPIO1        = 6;          //  output pin - set high to trigg
 const uint8_t Cam2_GPIO2        = 5;          //  input/output pin - 
 const uint8_t Cam1_GPIO2        = 7;          //  input/output pin - 
 const uint8_t forceOn           = 12;         //  input pin pulled high - goes low if force-on plug is installed
-const uint8_t statusLEDBlk      = A0;         //  output pin - connected to status LED black wire
-const uint8_t statusLEDRed      = 11;         //  output pin - connected to status LED red wire
+const uint8_t statusLEDRed      = A0;         //  output pin - connected to red/green status LED red input
+const uint8_t statusLEDGreen    = 11;         //  output pin - connected to red/green status LED green input
 const uint8_t intOrLED          = PIN_LED_RXL;// RX LED on pin 25
 const uint8_t intGrLED          = PIN_LED_TXL;// TX LED on pin 26
 
