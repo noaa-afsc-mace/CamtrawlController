@@ -504,7 +504,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "manufacture/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "remote_turn_on.step",
