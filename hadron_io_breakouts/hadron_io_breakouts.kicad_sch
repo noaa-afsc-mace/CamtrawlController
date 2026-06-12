@@ -3721,7 +3721,7 @@
 		)
 		(uuid "414118b0-6107-44a2-a953-8a3698da366f")
 	)
-	(text "Differential Pair Routing for OSH Park 4 Layer properties\n90 ohm impedence\n1 oz copper\n7.87 mil (0.1999) FR408HR 2113 dk 3.61\n9.84 mil spacing (0.25 mm)\n13.39 mil trace width (0.3401 mm)"
+	(text "Differential Pair Routing for OSH Park 4 Layer properties\n90 ohm impedence\n1 oz copper\n7.87 mil (0.1999) FR408HR 2113 dk 3.61\n5 mil spacing (0.127 mm)\n9.84 mil trace width (0.2499 mm)"
 		(exclude_from_sim no)
 		(at 48.768 96.266 0)
 		(effects
@@ -3753,7 +3753,7 @@
 		)
 		(uuid "c46925f0-167d-4632-803c-5d85f4758c88")
 	)
-	(text "Both USB0 and USB1 Differential Signals RX_P, RX_N\nand TX_P, RX_P have been swapped on the Samtech connector\nand thus are different than the pinout specified for the\nHadron carrier. This is allowed per USB3 spec to ease\nrouting and limit vias/trace crossing to maintain signal\nintegrity. Polarity is determined when the device is\nconnected."
+	(text "USB0 TX_P and TX_N and both USB1 RX_P, RX_N and TX_P,\nTX_N have been swapped on the Samtech connector and\nthus are different than the pinout specified for the\nHadron carrier. This is allowed per USB3 spec to ease\nrouting and limit vias/trace crossing to maintain signal\nintegrity. Polarity is determined when the device is\nconnected."
 		(exclude_from_sim no)
 		(at 48.26 121.158 0)
 		(effects
@@ -4030,28 +4030,6 @@
 			)
 		)
 	)
-	(global_label "USB1_RX_P"
-		(shape input)
-		(at 41.91 80.01 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "0178ce08-ae53-448d-952b-0d81eb6341e7")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 55.5994 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "USB1_D_P"
 		(shape input)
 		(at 100.33 48.26 0)
@@ -4109,28 +4087,6 @@
 		(uuid "060fbca6-e4f6-4759-8fc7-e71b013fae57")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 119.4791 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "USB0_RX_P"
-		(shape input)
-		(at 133.35 78.74 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "073c096f-23f3-4cfe-90e8-44608259c5a4")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 119.6606 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4338,9 +4294,9 @@
 			)
 		)
 	)
-	(global_label "USB0_TX_N"
+	(global_label "USB0_RX_P"
 		(shape input)
-		(at 133.35 63.5 180)
+		(at 74.93 66.04 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4348,14 +4304,36 @@
 			)
 			(justify right)
 		)
-		(uuid "21e2aa6c-28fb-4163-928c-b9572b9446b6")
+		(uuid "2073840b-0737-43bb-9bd2-b661e2f8add9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 119.9025 63.5 0)
+			(at 61.2406 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "USB1_RX_N"
+		(shape input)
+		(at 41.91 64.77 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "218306d9-5085-4795-8597-dd698aea7f53")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 55.6599 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -4373,28 +4351,6 @@
 		(uuid "22c97e70-a117-41e6-89d0-1ea1e149f782")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 126.4943 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "USB0_RX_P"
-		(shape input)
-		(at 74.93 68.58 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "2602e737-0234-4bd0-9f54-5f031a7e90ff")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 61.2406 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4422,6 +4378,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "USB1_RX_P"
+		(shape input)
+		(at 41.91 69.85 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "28cf3a54-e435-420b-9ecc-ccf91c6ca635")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 55.5994 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -4580,28 +4558,6 @@
 			)
 		)
 	)
-	(global_label "USB0_RX_N"
-		(shape input)
-		(at 74.93 66.04 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "39b22371-ec43-4925-879e-fb2984b4cb2c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 61.1801 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "SBC_Debug-Rx"
 		(shape input)
 		(at 219.71 147.32 0)
@@ -4637,6 +4593,28 @@
 		(uuid "3fece0db-ce6b-4786-9d53-0bfd01093e27")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 237.3303 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "USB1_TX_P"
+		(shape input)
+		(at 41.91 80.01 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4397c257-473c-42e4-944d-a78ae7aab208")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 55.297 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4712,9 +4690,9 @@
 			)
 		)
 	)
-	(global_label "USB0_TX_P"
+	(global_label "USB0_RX_N"
 		(shape input)
-		(at 133.35 68.58 180)
+		(at 74.93 68.58 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4722,9 +4700,9 @@
 			)
 			(justify right)
 		)
-		(uuid "5116205b-2dde-447d-b6f0-0988e451235c")
+		(uuid "52ed2cdc-839f-4776-a276-866bcb32ed85")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 119.963 68.58 0)
+			(at 61.1801 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4932,24 +4910,24 @@
 			)
 		)
 	)
-	(global_label "USB1_RX_N"
+	(global_label "USB0_TX_P"
 		(shape input)
-		(at 41.91 74.93 0)
+		(at 133.35 78.74 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
-		(uuid "79c5668f-3306-46fb-bfa8-13f4ba620b04")
+		(uuid "77684654-d08f-44e4-979b-5d089c3b2ee9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 55.6599 74.93 0)
+			(at 119.963 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -5042,9 +5020,31 @@
 			)
 		)
 	)
+	(global_label "USB0_TX_N"
+		(shape input)
+		(at 133.35 73.66 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "894fc488-3e8f-4cff-8d39-c59f91ede8b1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 119.9025 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "USB1_TX_N"
 		(shape input)
-		(at 41.91 64.77 0)
+		(at 41.91 74.93 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5052,9 +5052,9 @@
 			)
 			(justify left)
 		)
-		(uuid "8c4e6380-dd5c-4bad-9f72-1b68629c95df")
+		(uuid "8ba1ce39-2e46-4fda-a6c4-ce08570d6b9f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 55.3575 64.77 0)
+			(at 55.3575 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5148,28 +5148,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "USB1_TX_P"
-		(shape input)
-		(at 41.91 69.85 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "997417cb-e6a8-42f8-bd34-bfca6b23a122")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 55.297 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -5280,6 +5258,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "USB0_RX_P"
+		(shape input)
+		(at 133.35 68.58 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a2702234-7b42-4e66-849b-28068ade6521")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 119.6606 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -5517,28 +5517,6 @@
 		(uuid "ba269ea2-698f-40e0-a07b-4675437bdb9a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 68.0743 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "USB0_RX_N"
-		(shape input)
-		(at 133.35 73.66 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "ba484430-59e5-4c9f-929d-bd4bfbb46df6")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 119.6001 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6006,6 +5984,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "USB0_RX_N"
+		(shape input)
+		(at 133.35 63.5 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f327270a-1323-40dc-9f49-5660653fbd31")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 119.6001 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)

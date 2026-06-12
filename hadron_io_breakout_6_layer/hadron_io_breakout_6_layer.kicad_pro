@@ -493,14 +493,14 @@
       },
       {
         "clearance": 0.2,
-        "diff_pair_gap": 0.127,
+        "diff_pair_gap": 0.1778,
         "diff_pair_width": 0.254,
         "name": "90R_d",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "via_diameter": 0.458,
-        "via_drill": 0.2032
+        "via_diameter": 0.508,
+        "via_drill": 0.254
       },
       {
         "clearance": 0.2,
