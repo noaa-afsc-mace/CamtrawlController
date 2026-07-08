@@ -235,7 +235,6 @@ void setup()
     DEBUG_PRINT("INA260 NOT found!");
   }
 
-
   //  THE CURRENT VERSION OF THE CONTROL BOARD DOES NOT HAVE AN RTC - WE'LL
   //  KEEP THIS CODE FOR NOW IN CASE ONE IS ADDED.
 
@@ -391,6 +390,9 @@ void setup()
   
   //  and the sleep interval counter
   sleepCounter = millis();
+
+  //  and the external trigger interval counter
+  extTrigCounter = millis();
 
   //  set up the depth checking delay
   o = millis();
@@ -672,12 +674,14 @@ void loop()
     
     while (acquiring)
     {
-
       //  poll/read-out system sensors
       sampleSensors();
       
       //  check for serial commands
       sCmd.readSerial();
+
+      //  check if there is an external trigger signal
+      checkExternalTrigger();
 
       //  check if we're supposed to stop acquiring
       checkControllerState();
@@ -860,6 +864,30 @@ void loop()
   greenLEDOff();
   delay(2000);
 
+}
+
+
+/*
+ * checkExternalTrigger checks if the external trigger input pin has gone low,
+ * indicating that an external trigger has been received. It sends the 
+ * "externalTrigger" message to the PC which the acquisition software will
+ * process and trigger the cameras if no other trigger is in the queue
+ */
+void checkExternalTrigger()
+{
+  if (!digitalRead(externalTrigger))
+  {
+      // check if the minimum interval between external trigger messages has elapsed
+      if ((millis() - extTrigCounter) > EXTERNALTRIGINT)
+      {    
+          //  it has - send the externalTrigger message to the PC
+          Serial1.println("externalTrigger,");
+          DEBUG_PRINT("External Trigger detected");
+
+          //  update the counter value
+          extTrigCounter = millis();
+      }
+  }
 }
 
 
@@ -1241,26 +1269,52 @@ void trigger()
       delayMicroseconds(preFire);
 
       //  trigger the cameras
-      if (leftTrig)
+      if (leftTrig && rightTrig)
+      {
+        //  trigger both cameras simultaneously
+        triggerCamerasDirect(true);
+      }
+      else if (leftTrig)
+      {
+        //  trigger only the left camera
         digitalWriteDirect(Cam2_GPIO1, true);
-      if (rightTrig)
+      }
+      else if (rightTrig)
+      {
+        //  trigger only the right camera
         digitalWriteDirect(Cam1_GPIO1, true);
+      }
       delayMicroseconds(TRIGDURUS);
-      digitalWriteDirect(Cam2_GPIO1, false);
-      digitalWriteDirect(Cam1_GPIO1, false);
+
+      //  unset the trigger signal
+      triggerCamerasDirect(false);
     }
     else
     {
       //  with a 0 pre-fire we trigger the cameras first - this would be used with xenon strobes
 
       //  trigger the cameras
-      if (leftTrig)
+      if (leftTrig && rightTrig)
+      {
+        //  trigger both cameras simultaneously
+        triggerCamerasDirect(true);
+      }
+      else if (leftTrig)
+      {
+        //  trigger only the left camera
         digitalWriteDirect(Cam2_GPIO1, true);
-      if (rightTrig)
+      }
+      else if (rightTrig)
+      {
+        //  trigger only the right camera
         digitalWriteDirect(Cam1_GPIO1, true);
+      }
+
+      //  delay for the trigger duration
       delayMicroseconds(TRIGDURUS);
-      digitalWriteDirect(Cam2_GPIO1, false);
-      digitalWriteDirect(Cam1_GPIO1, false);
+
+      //  unset the camera trigger signals
+      triggerCamerasDirect(false);
 
       if (strobe1Exp > 0)
         digitalWriteDirect(strobeTrigOne, true);
@@ -1276,13 +1330,29 @@ void trigger()
     //  need to handle strobe triggering here.
 
     //  trigger the cameras
-    if (leftTrig)
-      digitalWriteDirect(Cam2_GPIO1, true);
-    if (rightTrig)
-      digitalWriteDirect(Cam1_GPIO1, true);
-    delayMicroseconds(TRIGDURUS);
-    digitalWriteDirect(Cam2_GPIO1, false);
-    digitalWriteDirect(Cam1_GPIO1, false);
+      if (leftTrig && rightTrig)
+      {
+        //  trigger both cameras simultaneously
+        triggerCamerasDirect(true);
+      }
+      else if (leftTrig)
+      {
+        //  trigger only the left camera
+        digitalWriteDirect(Cam2_GPIO1, true);
+      }
+      else if (rightTrig)
+      {
+        //  trigger only the right camera
+        digitalWriteDirect(Cam1_GPIO1, true);
+      }
+      //  delay for the trigger duration
+      delayMicroseconds(TRIGDURUS);
+
+      //  unset the camera trigger signals
+      triggerCamerasDirect(false);
+
+      if (strobe1Exp > 0)
+        digitalWriteDirect(strobeTrigOne, true);
   }
 
   //  turn the green LED back on

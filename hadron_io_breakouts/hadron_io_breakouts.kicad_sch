@@ -3699,14 +3699,13 @@
 		)
 		(uuid "308f67ea-9796-469c-8d60-0b09b459bd43")
 	)
-	(text "SBC GPIOs"
+	(text "SBC GPIOs\n3.3v logic"
 		(exclude_from_sim no)
-		(at 48.514 145.796 0)
+		(at 53.848 146.304 0)
 		(effects
 			(font
 				(size 1.778 1.778)
 			)
-			(justify left)
 		)
 		(uuid "31eb3aa8-a0b3-49d1-8f43-96971a9b4f1d")
 	)
@@ -3742,18 +3741,17 @@
 		)
 		(uuid "b147165c-8dfe-484c-83c3-6efb854aa116")
 	)
-	(text "SBC/MCU Serial IO"
+	(text "SBC/MCU Serial IO\nRS-232\n"
 		(exclude_from_sim no)
-		(at 109.22 145.034 0)
+		(at 123.444 146.304 0)
 		(effects
 			(font
 				(size 1.778 1.778)
 			)
-			(justify left)
 		)
 		(uuid "c46925f0-167d-4632-803c-5d85f4758c88")
 	)
-	(text "USB0 TX_P and TX_N and both USB1 RX_P, RX_N and TX_P,\nTX_N have been swapped on the Samtech connector and\nthus are different than the pinout specified for the\nHadron carrier. This is allowed per USB3 spec to ease\nrouting and limit vias/trace crossing to maintain signal\nintegrity. Polarity is determined when the device is\nconnected."
+	(text "USB0 TX_P and TX_N and both USB1 RX_P, RX_N and TX_P,\nTX_N have been swapped on the Samtech connector (J2) and\nthus are different than the pinout specified for the\nHadron carrier (P3). This is allowed per USB3 spec to ease\nrouting and limit vias/trace crossing to maintain signal\nintegrity. Polarity is determined when the device is\nconnected."
 		(exclude_from_sim no)
 		(at 48.26 121.158 0)
 		(effects

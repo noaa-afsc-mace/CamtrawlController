@@ -80,6 +80,7 @@
 #define SENSORDEBUGINT    2000    //  interval in milliseconds between sensor console messages when debugging 
 #define DEPTHCHKDELAY     10000   //  interval in milliseconds the controller will delay checking the system depth
 #define INA260_I2CADDR    0x45    //  the INA260 installed on the controller has both addr pins pulled high
+#define EXTERNALTRIGINT   100     //  minimum interval in milliseconds between sending external trigger commands. This sets the maximum rate the external trigger message is sent.
 
 
 //  define SAMD21 Mini pin connections
@@ -90,10 +91,17 @@ const uint8_t switchedPower     = A1;         //  output pin - set high to enabl
 const uint8_t presssureSwitch   = 13;         //  input pin pulled high - goes low if pressure switch closes
 const uint8_t strobeTrigOne     = 10;         //  output pin - set high to trigger strobe channel 1
 const uint8_t mcu_gpio_1        = 9;          //  generic input/output pin - DEFAULT: Input: External Shutdown - shuts down system when input is high
-const uint8_t Cam2_GPIO1        = 4;          //  output pin - set high to trigger left camera
-const uint8_t Cam1_GPIO1        = 6;          //  output pin - set high to trigger right camera
-const uint8_t Cam2_GPIO2        = 5;          //  input/output pin - 
-const uint8_t Cam1_GPIO2        = 7;          //  input/output pin - 
+
+// ----------------------------------------------------------------------------------------------
+// The camera trigger pins (CamX_GPIO1) are defined here, but these values are also hard
+// coded in the triggerCamerasDirect() function defined below. If the trigger pins
+// change, you must change them in the triggerCamerasDirect() also!
+const uint8_t Cam2_GPIO1        = 4;          //  PA08 - output pin - set high to trigger left camera
+const uint8_t Cam1_GPIO1        = 6;          //  PA20 - output pin - set high to trigger right camera
+// ----------------------------------------------------------------------------------------------
+
+const uint8_t Cam2_GPIO2        = 5;          //  PA15 - input/output pin - currently unused
+const uint8_t Cam1_GPIO2        = 7;          //  PA21 - input/output pin - currently unused
 const uint8_t forceOn           = 12;         //  input pin pulled high - goes low if force-on plug is installed
 const uint8_t statusLEDRed      = A0;         //  output pin - connected to red/green status LED red input
 const uint8_t statusLEDGreen    = 11;         //  output pin - connected to red/green status LED green input
@@ -102,7 +110,7 @@ const uint8_t intGrLED          = PIN_LED_TXL;// TX LED on pin 26
 
 
 //  define default parameter values
-bool checkPCTimeout       = true;    //  true if you want the system to park when the PC can't boot
+bool checkPCTimeout       = false;    //  true if you want the system to park when the PC can't boot
 bool forcedOn             = false;   //  true if the system was forced on
 bool presSwClosed         = false;   //  true if the pressure switch is closed
 bool flashOnPowerup       = true;    //  if true, flash the strobes a few times on power up
@@ -166,6 +174,7 @@ uint32_t m                = 0;       //  general use unsigned long
 uint32_t o                = 0;       //  general use unsigned long
 uint32_t sSampCounter     = 0;       //  tracks elapsed time in sensor timer event for sensor sampling
 uint32_t vSampCounter     = 0;       //  tracks elapsed time in sensor timer event for voltage sampling
+uint32_t extTrigCounter   = 0;       //  tracks elapsed time between external trigger events. Used to throttle external trigger messages.
 uint32_t sleepCounter     = 0;
 
 
@@ -247,6 +256,21 @@ inline void digitalWriteDirect(uint8_t PIN, boolean val){
   if(val)  PORT->Group[g_APinDescription[PIN].ulPort].OUTSET.reg = (1ul << g_APinDescription[PIN].ulPin);
   else     PORT->Group[g_APinDescription[PIN].ulPort].OUTCLR.reg = (1ul << g_APinDescription[PIN].ulPin);
 }
+
+
+//  define a faster version of digitalWrite optimized for the camera trigger pins. This
+//  function will set/unset both pins simultaneously. The port and pin numbers are hardcoded
+//  to further optimize the function. Because of this, you must change the port and pin values 
+//  if this code is modified to run on something other than the Sparkfun SAMD21 Mini.
+//
+//  For the current version of the control board, the trigger pins are on arduino pins 4 and 6.
+//  Those pins are on Port Group A. Port A is value 0, arduino pin 4 is SAMD21 pin 8 and arduino
+//  pin 6 is SAMD21 pin 20. 
+inline void triggerCamerasDirect(boolean val){
+  if(val)  PORT->Group[0].OUTSET.reg = (1ul << 8) | (1ul << 20);
+  else     PORT->Group[0].OUTCLR.reg = (1ul << 8) | (1ul << 20);
+}
+
 
 //  create an enum for the system shutdown condition
 enum controllerStateEnum {
