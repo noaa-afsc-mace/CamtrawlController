@@ -2019,7 +2019,9 @@ void setSystemState()
   arg = sCmd.next();
   controllerState = (controllerStateEnum) atoi(arg);
 
-  Serial1.println("setSystemState,OK");
+  Serial1.print("setState,");
+  Serial1.println((int)controllerState);
+  DEBUG_PRINT(String("setState sent. State:") + String(controllerState));
 
 }
 
@@ -2043,7 +2045,7 @@ void getSystemState()
 
   //  send the response string 
   Serial1.print("getState,");
-  Serial1.print((int)controllerState); Serial1.print("\n");
+  Serial1.println((int)controllerState);
   DEBUG_PRINT(String("getState sent. State:") + String(controllerState));
 
 }
@@ -2061,8 +2063,9 @@ void getSystemState()
  * 
  * setPCState, <PC state as int>\n
  * 
+ *   0 = PC is off (or just about to issue shutdown command)
+ *   1 = PC in normal operation mode
  * 254 = PC error - initiates a shutdown from the PC side
- * 255 = PC acknowledges shutdown command
  * 
  */
 void setPCState()
@@ -2075,7 +2078,10 @@ void setPCState()
   arg = sCmd.next();
   PCState = atoi(arg);
 
-  Serial1.println("setPCState,OK");
+  Serial1.print("setPCState,");
+  Serial1.println((int)PCState);
+  DEBUG_PRINT(String("setPCState received. State:") + String(PCState));
+
 }
 
 
