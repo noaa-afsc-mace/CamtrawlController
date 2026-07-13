@@ -33,8 +33,9 @@
 
 //  pin definitions
 const uint8_t   HES = 0;
-const uint8_t   forceOn = 1;
-const uint8_t   pressureSwitch = 2;
+// Starting with V4.0 of the RTO, the forceOn and pressureSwitch pins are flipped
+const uint8_t   forceOn = 2;
+const uint8_t   pressureSwitch = 1;
 const uint8_t   yellowLED = 3;
 const uint8_t   blueLED = 4;
 

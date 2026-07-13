@@ -88,6 +88,7 @@ const uint8_t powerEnable       = A2;         //  output pin - set high to enabl
 const uint8_t strobeEnable      = A3;         //  output pin - set high to enable strobe power
 const uint8_t externalTrigger   = 8;          //  input pin pulled high - set low to externally trigger camera system
 const uint8_t switchedPower     = A1;         //  output pin - set high to enable switched 5v power (0.5A max)
+const uint8_t forceOn           = 12;         //  input pin pulled high - goes low if force-on plug is installed
 const uint8_t presssureSwitch   = 13;         //  input pin pulled high - goes low if pressure switch closes
 const uint8_t strobeTrigOne     = 10;         //  output pin - set high to trigger strobe channel 1
 const uint8_t mcu_gpio_1        = 9;          //  generic input/output pin - DEFAULT: Input: External Shutdown - shuts down system when input is high
@@ -102,7 +103,6 @@ const uint8_t Cam1_GPIO1        = 6;          //  PA20 - output pin - set high t
 
 const uint8_t Cam2_GPIO2        = 5;          //  PA15 - input/output pin - currently unused
 const uint8_t Cam1_GPIO2        = 7;          //  PA21 - input/output pin - currently unused
-const uint8_t forceOn           = 12;         //  input pin pulled high - goes low if force-on plug is installed
 const uint8_t statusLEDRed      = A0;         //  output pin - connected to red/green status LED red input
 const uint8_t statusLEDGreen    = 11;         //  output pin - connected to red/green status LED green input
 const uint8_t intOrLED          = PIN_LED_RXL;// RX LED on pin 25
